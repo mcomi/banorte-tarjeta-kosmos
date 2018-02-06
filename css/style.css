@@ -1498,6 +1498,30 @@ body {
   #landing-section.just-header {
     height: 80px; } }
 
+@media (max-width: 435px) {
+  .solicitud .nav-tabs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  #desktop-menu {
+    display: none; }
+  .navbar {
+    min-height: 70px; }
+  .consulta-folio-action {
+    top: 85px; }
+  .mobile-padding {
+    padding: 28px 0; }
+  .step-panel {
+    padding: 10px 20px;
+    height: 120px;
+    margin: 10px; }
+  .steps-container {
+    padding-bottom: 20px; }
+  .footer-bottom .phone-cont {
+    text-align: center;
+    padding: 10px; } }
+
 @media (min-width: 801px) {
   .navbar-nav {
     float: right; }
