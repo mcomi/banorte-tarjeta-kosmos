@@ -1,33 +1,80 @@
-$(function() {
-  $.fn.editable.defaults.mode = 'inline';
-});
-var inputsText = document.querySelectorAll('input')
 
-inputsText.forEach(input => input.addEventListener('change', function() {
-  if (this.value !== '')
-    this.classList.add('valid')
-}))
+var actividad = ''
+var ingreso = ''
 
-document.addEventListener('DOMContentLoaded', function(){
+$('.category').click(function() {
+    if($(this).data('category-actividad') != undefined){
+      actividad = $(this).data('category-actividad');
+      var clone = $(this).clone();
+      clone.appendTo('#eleccion-actividad');
+      $('#eleccion-actividad .category').addClass('active');
+      $('#que-hacer').addClass('hidden');
+      var minusSymbol = $('#eleccion-actividad .category').find('.remove-symbol');
+      minusSymbol.removeClass('hidden');
+      minusSymbol.click(function(){
+        $('#eleccion-actividad').html('')
+        actividad = ''
+        $('#que-hacer').removeClass('hidden').animate2('bounceInLeft');
+        if(!$('#opciones-filtradas').hasClass('hidden')){
+          $('#opciones-filtradas').addClass('hidden')
+        }
+      })
+      if(!$('#eleccion-ingreso .category').length){
+        $('#cuanto-ganas').removeClass('hidden');
+        $('#cuanto-ganas').animate2('bounceInLeft');
+      }
+      if(actividad != '' && ingreso != ''){
+        $('#icono-elimina-ambos').removeClass('hidden');
+        revisaPropuestas(actividad, ingreso);
+      }else {
+        if(!$('#opciones-filtradas').hasClass('hidden')){
+          $('#opciones-filtradas').addClass('hidden')
 
-    Typed.new("#typed", {
-        stringsElement: document.getElementById('typed-strings'),
-        typeSpeed: 40,
-        backDelay: 500,
-        loop: true,
-        contentType: 'html', // or text
-        // defaults to null for infinite loop
-        loopCount: null,
-        resetCallback: function() { newTyped(); }
-    });
-
-    var resetElement = document.querySelector('.reset');
-    if(resetElement) {
-        resetElement.addEventListener('click', function() {
-            document.getElementById('typed')._typed.reset();
-        });
+        }
+      }
+    }
+    if($(this).data('category-ingreso') != undefined){
+      ingreso = $(this).data('category-ingreso');
+      var clone = $(this).clone();
+      clone.appendTo('#eleccion-ingreso')
+      $('#eleccion-ingreso .category').addClass('active');
+      $('#cuanto-ganas').addClass('hidden').animate2('fadeOutDown');
+      var minusSymbol = $('#eleccion-ingreso .category').find('.remove-symbol');
+      minusSymbol.removeClass('hidden');
+      minusSymbol.click(function(){
+        $('#eleccion-ingreso').html('')
+        ingreso = ''
+        $('#cuanto-ganas').removeClass('hidden').animate2('bounceInLeft');
+        $('#icono-elimina-ambos').addClass('hidden');
+        if(!$('#opciones-filtradas').hasClass('hidden')){
+          $('#opciones-filtradas').addClass('hidden');
+        }
+      })
+      if(actividad != '' && ingreso != ''){
+        $('#icono-elimina-ambos').removeClass('hidden');
+        revisaPropuestas(actividad, ingreso);
+      }else {
+        if(!$('#opciones-filtradas').hasClass('hidden')){
+          $('#opciones-filtradas').addClass('hidden').animate2('fadeOutDown');
+        }
+      }
     }
 
+});
+
+function revisaPropuestas() {
+  $('#opciones-filtradas').removeClass('hidden')
+  $('#opciones-filtradas').animate2('bounceInLeft');
+}
+
+$('#icono-elimina-ambos').click(function(){
+  actividad = '';
+  ingreso = '';
+  $('#eleccion-ingreso').html('')
+  $('#eleccion-actividad').html('')
+  $('#que-hacer').removeClass('hidden').animate2('bounceInLeft');
+  $('#icono-elimina-ambos').addClass('hidden');
+  $('#opciones-filtradas').addClass('hidden');
 });
 
 $('#btn-solicita-credito-fixed').click(function(){
@@ -100,3 +147,27 @@ $(function() {
 
   });
 });
+
+// modal folio
+var olvideFolioLink = document.getElementById('olvide-folio-link');
+var tituloModal = document.getElementById('modal-folio-titulo');
+olvideFolioLink.addEventListener('click', function(){
+  tituloModal.innerHTML = 'Folio olvidado';
+  document.getElementById('ingresa-folio').classList.add('hidden');
+  document.getElementById('olvide-folio').classList.remove('hidden');
+})
+
+document.getElementById('btn-solicita-sms').addEventListener('click', function(){
+var numCelular = document.getElementById('cel').value;
+  //solicitaFolioSms()
+  console.log(numCelular);
+
+  document.getElementById('olvide-folio').classList.add('hidden');
+  document.getElementById('input-sms-code').classList.remove('hidden');
+})
+
+// Quote Carousel
+$('#quote-carousel').carousel({
+    pause: true,
+    interval: 4000,
+  });
