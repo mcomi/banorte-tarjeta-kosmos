@@ -67,246 +67,276 @@
 
 		<section class="solicitud">
 			<div id="exTab2" class="container">
-<ul class="nav nav-tabs">
-			<li class="active">
-        <a  href="#1" data-toggle="tab">1. Datos generales</a>
-			</li>
-			<li><a href="#2" data-toggle="tab">2. Datos complementarios</a>
-			</li>
-			<li><a href="#3" data-toggle="tab">3. Carga de documentos</a>
-			</li>
-		</ul>
+				<ul class="nav nav-tabs">
+					<li class="active">
+						<a href="#1" data-toggle="tab">1. Datos generales</a>
+					</li>
+					<li><a href="#2" data-toggle="tab">2. Datos complementarios</a>
+					</li>
+					<li><a href="#3" data-toggle="tab">3. Carga de documentos</a>
+					</li>
+				</ul>
 
-			<div class="tab-content">
-			  <div class="tab-pane active" id="1">
-					<div class="col-md-12">
-						<span id="modal-folio-titulo" class="line-after">Datos generales</span>
-						<p>Tu folio de registro es: <span>123123432423</span> <img src="img/Shape.svg" alt=""></p>
-						<p class="small">Guarda tu folio, haciendo click en el ícono podras copiarlo para pegarlo en el lugar que decidas </p>
-						<h5>Datos personales</h5>
-						<p>Tus datos deben ser identicos a los de tu identificación oficial, te sugerimos tomarle una fotografía para facilitar el proceso. Puedes utilizar estos tres elementos</p>
+				<div class="tab-content">
+					<div class="tab-pane active" id="1">
+						<div class="col-md-12">
+							<span id="modal-folio-titulo" class="line-after">Datos generales</span>
+							<p>Tu folio de registro es: <span id="folio-value" class="red">123123432423 </span> <span class="tooltip-folio">
+							<icon id="copy-clipboard" class="fa fa-tag red"></icon><span class="tooltiptext" id="myTooltip">Copiar folio</span>
+								</span>
+							</p>
+							<p class="small">Guarda tu folio, haciendo click en el ícono podras copiarlo para pegarlo en el lugar que decidas </p><br>
+							<h4>Datos personales</h4>
+							<p>Tus datos deben ser identicos a los de tu identificación oficial, te sugerimos tomarle una fotografía para facilitar el proceso. Puedes utilizar estos tres elementos</p>
 
-					</div>
-					<div class="row">
+						</div>
+						<div class="row">
 
-						<div class="col-md-2 panel-icons">
-							<div class="panel-icon">
-								<img src="img/webcam.svg" alt="">
+							<div class="col-md-2 panel-icons">
+								<div class="panel-icon">
+									<img src="img/webcam.svg" alt="">
+								</div>
+								<span>Webcam</span>
 							</div>
-							<span>Webcam</span>
-						</div>
-						<div class="col-md-2 panel-icons">
-							<div class="panel-icon">
-								<img src="img/imac.svg" alt="">
+							<div class="col-md-2 panel-icons">
+								<div class="panel-icon">
+									<img src="img/imac.svg" alt="">
+								</div>
+								<span>Computadora</span>
 							</div>
-							<span>Computadora</span>
-						</div>
-						<div class="col-md-2 panel-icons">
-							<div class="panel-icon">
-								<img src="img/smartphone.svg" alt="">
-							</div>
-							<span>Smartphone</span>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-3 col-xs-12">
-							<div class="form-group col-xs-12">
-								<label for="nombre">Ingresa tu nombre</label>
-								<input type="tel" class="form-control validate" id="nombre" placeholder="Nombre">
-								<span class="input-success"></span>
-								<span class="input-error"></span>
+							<div class="col-md-2 panel-icons">
+								<div class="panel-icon">
+									<img src="img/smartphone.svg" alt="">
+								</div>
+								<span>Smartphone</span>
 							</div>
 						</div>
-						<div class="col-md-3 col-xs-12">
-							<div class="form-group col-xs-12">
-								<label for="correo">Ingresa tu correo electrónico</label>
-								<input type="tel" class="form-control validate" id="correo" placeholder="juan@gmail.com">
-								<span class="input-success"></span>
-								<span class="input-error"></span>
+						<div class="row">
+							<div class="col-md-4 col-xs-12">
+								<div class="form-group col-xs-12">
+									<label for="nombre">¿Tu nombre es?</label>
+									<input type="text" class="form-control validate" id="nombre" placeholder="Nombre">
+									<span class="input-success"></span>
+									<span class="input-error"></span>
+								</div>
 							</div>
-						</div>
-						<div class="col-md-3 col-xs-12">
-							<div class="form-group col-xs-12">
-								<label for="celular">Ingresa tu celular</label>
-								<input type="tel" class="form-control validate" id="celular" placeholder="55 0000 0000">
-								<span class="input-success"></span>
-								<span class="input-error"></span>
+							<div class="col-md-4 col-xs-12">
+								<div class="form-group col-xs-12">
+									<label for="apellido-p">¿Tu apellido paterno es?</label>
+									<input type="text" class="form-control validate" id="apellido-p" placeholder="Apellido paterno">
+									<span class="input-success"></span>
+									<span class="input-error"></span>
+								</div>
 							</div>
-						</div>
-						<div class="col-md-3 col-xs-12">
-							<div class="form-group col-xs-12">
-								<label for="celular">Ingresa tu celular</label>
-								<input type="tel" class="form-control validate" id="celular" placeholder="55 0000 0000">
-								<span class="input-success"></span>
-								<span class="input-error"></span>
+							<div class="col-md-4 col-xs-12">
+								<div class="form-group col-xs-12">
+									<label for="apellido-p">¿Tu apellido materno es?</label>
+									<input type="text" class="form-control validate" id="apellido-p" placeholder="Apellido materno">
+									<span class="input-success"></span>
+									<span class="input-error"></span>
+								</div>
 							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-3 col-xs-12">
-							<div class="form-group col-xs-12">
-								<label for="nombre">Ingresa tu nombre</label>
-								<input type="tel" class="form-control validate" id="nombre" placeholder="Nombre">
-								<span class="input-success"></span>
-								<span class="input-error"></span>
-							</div>
-						</div>
-						<div class="col-md-3 col-xs-12">
-							<div class="form-group col-xs-12">
-								<label for="correo">Ingresa tu correo electrónico</label>
-								<input type="tel" class="form-control validate" id="correo" placeholder="juan@gmail.com">
-								<span class="input-success"></span>
-								<span class="input-error"></span>
-							</div>
-						</div>
-						<div class="col-md-3 col-xs-12">
-							<div class="form-group col-xs-12">
-								<label for="celular">Ingresa tu celular</label>
-								<input type="tel" class="form-control validate" id="celular" placeholder="55 0000 0000">
-								<span class="input-success"></span>
-								<span class="input-error"></span>
-							</div>
-						</div>
-						<div class="col-md-3 col-xs-12">
-							<div class="form-group col-xs-12">
-								<label for="celular">Ingresa tu celular</label>
-								<input type="tel" class="form-control validate" id="celular" placeholder="55 0000 0000">
-								<span class="input-success"></span>
-								<span class="input-error"></span>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-3 col-xs-12">
-							<div class="form-group col-xs-12">
-								<label for="nombre">Ingresa tu nombre</label>
-								<input type="tel" class="form-control validate" id="nombre" placeholder="Nombre">
-								<span class="input-success"></span>
-								<span class="input-error"></span>
-							</div>
-						</div>
-						<div class="col-md-3 col-xs-12">
-							<div class="form-group col-xs-12">
-								<label for="correo">Ingresa tu correo electrónico</label>
-								<input type="tel" class="form-control validate" id="correo" placeholder="juan@gmail.com">
-								<span class="input-success"></span>
-								<span class="input-error"></span>
-							</div>
-						</div>
-						<div class="col-md-3 col-xs-12">
-							<div class="form-group col-xs-12">
-								<label for="celular">Ingresa tu celular</label>
-								<input type="tel" class="form-control validate" id="celular" placeholder="55 0000 0000">
-								<span class="input-success"></span>
-								<span class="input-error"></span>
-							</div>
-						</div>
-						<div class="col-md-3 col-xs-12">
-							<div class="form-group col-xs-12">
-								<label for="celular">Ingresa tu celular</label>
-								<input type="tel" class="form-control validate" id="celular" placeholder="55 0000 0000">
-								<span class="input-success"></span>
-								<span class="input-error"></span>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-3 col-xs-12">
-							<div class="form-group col-xs-12">
-								<label for="nombre">Ingresa tu nombre</label>
-								<input type="tel" class="form-control validate" id="nombre" placeholder="Nombre">
-								<span class="input-success"></span>
-								<span class="input-error"></span>
-							</div>
-						</div>
-						<div class="col-md-3 col-xs-12">
-							<div class="form-group col-xs-12">
-								<label for="correo">Ingresa tu correo electrónico</label>
-								<input type="tel" class="form-control validate" id="correo" placeholder="juan@gmail.com">
-								<span class="input-success"></span>
-								<span class="input-error"></span>
-							</div>
-						</div>
-					</div>
-					<hr>
-					<div class="col-md-12">
-						<h4>Domicilio</h4>
-					</div>
-					<div class="row">
-						<div class="col-md-3 col-xs-12">
-							<div class="form-group col-xs-12">
-								<label for="nombre">Ingresa tu nombre</label>
-								<input type="tel" class="form-control validate" id="nombre" placeholder="Nombre">
-								<span class="input-success"></span>
-								<span class="input-error"></span>
-							</div>
-						</div>
-						<div class="col-md-3 col-xs-12">
-							<div class="form-group col-xs-12">
-								<label for="correo">Ingresa tu correo electrónico</label>
-								<input type="tel" class="form-control validate" id="correo" placeholder="juan@gmail.com">
-								<span class="input-success"></span>
-								<span class="input-error"></span>
-							</div>
-						</div>
-						<div class="col-md-3 col-xs-12">
-							<div class="form-group col-xs-12">
-								<label for="celular">Ingresa tu celular</label>
-								<input type="tel" class="form-control validate" id="celular" placeholder="55 0000 0000">
-								<span class="input-success"></span>
-								<span class="input-error"></span>
-							</div>
-						</div>
-						<div class="col-md-3 col-xs-12">
-							<div class="form-group col-xs-12">
-								<label for="celular">Ingresa tu celular</label>
-								<input type="tel" class="form-control validate" id="celular" placeholder="55 0000 0000">
-								<span class="input-success"></span>
-								<span class="input-error"></span>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-3 col-xs-12">
-							<div class="form-group col-xs-12">
-								<label for="nombre">Ingresa tu nombre</label>
-								<input type="tel" class="form-control validate" id="nombre" placeholder="Nombre">
-								<span class="input-success"></span>
-								<span class="input-error"></span>
-							</div>
-						</div>
-						<div class="col-md-3 col-xs-12">
-							<div class="form-group col-xs-12">
-								<label for="correo">Ingresa tu correo electrónico</label>
-								<input type="tel" class="form-control validate" id="correo" placeholder="juan@gmail.com">
-								<span class="input-success"></span>
-								<span class="input-error"></span>
-							</div>
-						</div>
-						<div class="col-md-3 col-xs-12">
-							<div class="form-group col-xs-12">
-								<label for="celular">Ingresa tu celular</label>
-								<input type="tel" class="form-control validate" id="celular" placeholder="55 0000 0000">
-								<span class="input-success"></span>
-								<span class="input-error"></span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="tab-pane" id="2">
-					<div class="col-md-12">
 
-						<span class="line-after">Datos complementarios</span>
-					</div>
-				</div>
-        <div class="tab-pane" id="3">
-					<div class="col-md-12">
+						</div>
+						<div class="row">
+							<div class="col-md-4 col-xs-12">
+								<div class="form-group col-xs-12">
+									<label for="fecha-nac">¿Cuándo naciste?</label>
+									<input type="text" class="form-control validate" id="fecha-nac" placeholder="Día/Mes/Año">
+									<span class="input-success"></span>
+									<span class="input-error"></span>
+								</div>
+							</div>
+							<div class="col-md-4 col-xs-12">
+								<div class="form-group col-xs-12">
+									<label for="nacionalidad">¿Tu nacionalidad es?</label>
+									<input type="text" class="form-control validate" id="nacionalidad" placeholder="Mexicana">
+									<span class="input-success"></span>
+									<span class="input-error"></span>
+								</div>
+							</div>
+							<div class="col-md-4 col-xs-12">
+								<div class="form-group col-xs-12">
+									<label for="sexo">Elige tu género</label>
+									<select class="form-control validate" id="sexo" placeholder="">
+									<option value="m" selected>Masculino</option>
+									<option value="f">Femenino</option>
+								</select>
+									<span class="input-success"></span>
+									<span class="input-error"></span>
+								</div>
+							</div>
 
-						<span class="line-after">Carga de documentos</span>
+						</div>
+						<div class="row">
+							<div class="col-md-4 col-xs-12">
+								<div class="form-group col-xs-12">
+									<label for="curp">¿Tu CURP es?</label>
+									<input type="text" class="form-control validate" id="curp" placeholder="">
+									<span class="input-success"></span>
+									<span class="input-error"></span>
+								</div>
+							</div>
+							<div class="col-md-4 col-xs-12">
+								<div class="form-group col-xs-12">
+									<label for="rfc">¿Tu RFC con homoclave es?</label>
+									<input type="text" class="form-control validate" id="rfc" placeholder="">
+									<span class="input-success"></span>
+									<span class="input-error"></span>
+								</div>
+							</div>
+
+						</div>
+
+						<hr>
+						<div class="col-md-12">
+							<h4>Domicilio</h4>
+						</div>
+						<div class="row">
+							<div class="col-md-4 col-xs-12">
+								<div class="form-group col-xs-12">
+									<label for="calle">¿La calle donde vives es?</label>
+									<input type="text" class="form-control validate" id="calle" placeholder="calle">
+									<span class="input-success"></span>
+									<span class="input-error"></span>
+								</div>
+							</div>
+							<div class="col-md-4 col-xs-12">
+								<div class="form-group col-xs-12">
+									<label for="num-ext">¿El número exterior es?</label>
+									<input type="text" class="form-control validate" id="num-ext" placeholder="">
+									<span class="input-success"></span>
+									<span class="input-error"></span>
+								</div>
+							</div>
+							<div class="col-md-4 col-xs-12">
+								<div class="form-group col-xs-12">
+									<label for="num-int">¿El número interior es?</label>
+									<input type="text" class="form-control validate" id="num-int" placeholder="">
+									<span class="input-success"></span>
+									<span class="input-error"></span>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4 col-xs-12">
+								<div class="form-group col-xs-12">
+									<label for="cp">¿El código postal es?</label>
+									<input type="tel" class="form-control validate" id="cp" placeholder="">
+									<span class="input-success"></span>
+									<span class="input-error"></span>
+								</div>
+							</div>
+							<div class="col-md-4 col-xs-12">
+								<div class="form-group col-xs-12">
+									<label for="colonia">¿La colonia es?</label>
+									<select class="form-control validate" id="colonia" placeholder="">
+									<option value="m" selected>Coyoacán</option>
+									<option value="f">Tlalpan</option>
+								</select>
+									<span class="input-success"></span>
+									<span class="input-error"></span>
+								</div>
+							</div>
+							<div class="col-md-4 col-xs-12">
+								<div class="form-group col-xs-12">
+									<label for="municipio">¿La ciudad o municipio es?</label>
+									<input type="text" class="form-control validate" id="municipio" placeholder="">
+									<span class="input-success"></span>
+									<span class="input-error"></span>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4 col-xs-12">
+								<div class="form-group col-xs-12">
+									<label for="estado">¿El estado es?</label>
+									<input type="tel" class="form-control validate" id="estado" placeholder="Nombre">
+									<span class="input-success"></span>
+									<span class="input-error"></span>
+								</div>
+							</div>
+
+						</div>
+						<hr>
+						<div class="col-md-12">
+							<h4>Datos crediticios</h4>
+
+							<p class="padding-bottom-20">Debes ser muy especifico en estas respuestas, recuerda que aúnque tengas un buen historial crediticio, si no encontramos tús datos no nos sera posible validarlo</p>
+						</div>
+						<div class="row opciones-crediticias">
+
+							<div class="col-md-4 col-xs-12">
+								<p>¿Tienes tarjeta de crédito?</p>
+								<div class="radio-input-solicitud">
+									<input type="radio" id="no-tc" value="no-tc" name="tarjeta-credito">
+									<label for="no-tc"><span>No </span></label>
+								</div>
+								<div class="radio-input-solicitud">
+									<input type="radio" id="si-tc" value="si-tc" name="tarjeta-credito">
+									<label for="si-tc"><span>Si </span></label>
+								</div>
+							</div>
+							<div class="col-md-4 col-xs-12">
+                <div class="form-group col-xs-12">
+									<label for="digitos-tarjeta">Escribe los útimos 4 números</label>
+									<input type="tel" class="form-control validate input-infonavit" id="digitos-tarjeta" placeholder="1234">
+									<span class="input-success"></span>
+									<span class="input-error"></span>
+								</div>
+              </div>
+							<div class="col-md-4 col-xs-12">
+								<p>¿Eres titular de un crédito hipotecario?</p>
+								<div class="radio-input-solicitud">
+									<input type="radio" id="no-ch" value="no-ch" name="credito-hipotecario">
+									<label for="no-ch"><span>No </span></label>
+								</div>
+								<div class="radio-input-solicitud">
+									<input type="radio" id="si-ch" value="si-ch" name="credito-hipotecario">
+									<label for="si-ch"><span>Si </span></label>
+								</div>
+							</div>
+						</div>
+						<div class="row opciones-crediticias">
+							<div class="col-md-4 col-xs-12">
+								<p>¿Has sido titular de un crédito automotriz en los últimos 24 meses?</p>
+								<div class="radio-input-solicitud">
+									<input type="radio" id="no-ca" value="no-ca" name="credito-automotriz">
+									<label for="no-ca"><span>No </span></label>
+								</div>
+								<div class="radio-input-solicitud">
+									<input type="radio" id="si-ca" value="si-ca" name="credito-automotriz">
+									<label for="si-ca"><span>Si </span></label>
+								</div>
+							</div>
+							<div class="col-md-4 col-xs-12">
+                <div class="form-group col-xs-12">
+									<label for="ingresos">¿Tus ingresos mensuales son de?</label>
+									<input type="tel" class="form-control validate input-infonavit" id="ingresos" placeholder="1234">
+									<span class="input-success"></span>
+									<span class="input-error"></span>
+								</div>
+              </div>
+						</div>
+						<div class="col-md-12 right">
+							<a href="solicitud.html">Continuar <i class="fa fa-arrow-right"></i></a>
+						</div>
+					</div>
+
+					<div class="tab-pane" id="2">
+						<div class="col-md-12">
+
+							<span class="line-after">Datos complementarios</span>
+						</div>
+					</div>
+					<div class="tab-pane" id="3">
+						<div class="col-md-12">
+
+							<span class="line-after">Carga de documentos</span>
+						</div>
 					</div>
 				</div>
 			</div>
-  </div>
 		</section>
 
 
@@ -326,8 +356,7 @@
 					<div class="row">
 						<div class="copyright col-xs-12 col-sm-6 col-md-6">
 
-							<div class="text-footer-bottom">Términos Legales | Aviso de Privacidad | Consulta los costos y las comisiones de nuestros productos
-								2017 Grupo Financiero Banorte. Derechos reservados.</div>
+							<div class="text-footer-bottom">Términos Legales | Aviso de Privacidad | Consulta los costos y las comisiones de nuestros productos 2017 Grupo Financiero Banorte. Derechos reservados.</div>
 						</div>
 						<div class="phone-cont col-xs-6 col-sm-6 col-md-6">
 							<div class="col-md-12 tel">
