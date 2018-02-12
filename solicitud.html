@@ -92,20 +92,20 @@
 						</div>
 						<div class="row">
 
-							<div class="col-md-2 panel-icons">
-								<div class="panel-icon">
+							<div class="col-md-2 panel-icons" id="icon-webcam">
+								<div class="panel-icon" data-toggle="modal" data-target="#modalWebCam">
 									<img src="img/webcam.svg" alt="">
 								</div>
 								<span>Webcam</span>
 							</div>
-							<div class="col-md-2 panel-icons">
-								<div class="panel-icon">
+							<div class="col-md-2 panel-icons" id="icon-pc">
+								<div class="panel-icon" data-toggle="modal" data-target="#modalComputadora">
 									<img src="img/imac.svg" alt="">
 								</div>
 								<span>Computadora</span>
 							</div>
-							<div class="col-md-2 panel-icons">
-								<div class="panel-icon">
+							<div class="col-md-2 panel-icons" id="icon-smarthphone">
+								<div class="panel-icon" data-toggle="modal" data-target="#modalComputadora">
 									<img src="img/smartphone.svg" alt="">
 								</div>
 								<span>Smartphone</span>
@@ -327,17 +327,572 @@
 						<div class="col-md-12">
 
 							<span class="line-after">Datos complementarios</span>
+							<p>Estamos muy cerca de completar el proceso, los datos complementarios son escenciales para darte un mejor servicio </p>
+						</div>
+						<div class="row">
+							<div class="col-md-4 col-xs-12">
+								<div class="form-group col-xs-12">
+									<label for="tipo-domicilio">¿Tu domicilio es?</label>
+									<select class="form-control validate" id="tipo-domicilio">
+									<option value="p" selected>Propio</option>
+									<option value="r">Rentado</option>
+								</select>
+									<span class="input-success"></span>
+									<span class="input-error"></span>
+								</div>
+							</div>
+							<div class="col-md-4 col-xs-12">
+								<div class="form-group col-xs-12">
+									<label for="tel-casa">¿Tu teléfono de casa es?</label>
+									<input type="tel" class="form-control validate" id="tel-casa" placeholder="">
+									<span class="input-success"></span>
+									<span class="input-error"></span>
+								</div>
+							</div>
+							<div class="col-md-4 col-xs-12">
+								<div class="form-group col-xs-12">
+									<label for="tel-alterno">Proporciona un teléfono alterno</label>
+									<input type="tel" class="form-control validate" id="tel-alterno" placeholder="">
+									<span class="input-success"></span>
+									<span class="input-error"></span>
+								</div>
+							</div>
+
+						</div>
+						<div class="row">
+							<div class="col-md-4 col-xs-12">
+								<div class="form-group col-xs-12">
+									<label for="condicion-domicilio">¿Tu domicilio es de condición?</label>
+									<select class="form-control validate" id="condicion-domicilio">
+									<option value="p" selected>Propio</option>
+									<option value="r">Rentado</option>
+								</select>
+									<span class="input-success"></span>
+									<span class="input-error"></span>
+								</div>
+							</div>
+							<div class="col-md-4 col-xs-12">
+								<div class="form-group col-xs-12">
+									<label for="nivel-academico">¿Tu nivel académico es?</label>
+									<select class="form-control validate" id="nivel-academico">
+									<option value="p" selected>Maestría</option>
+									<option value="r">Licenciatura</option>
+								</select>
+									<span class="input-success"></span>
+									<span class="input-error"></span>
+								</div>
+							</div>
+						</div>
+						<hr>
+						<div class="col-md-12">
+							<h4>Referencias bancarias</h4>
+						</div>
+						<div class="row opciones-crediticias">
+							<div class="col-md-4 col-xs-12">
+								<p>¿Tienes cuenta en banorte?</p>
+								<div class="radio-input-solicitud">
+									<input type="radio" id="no-banorte" value="no-banorte" name="cuenta-banorte">
+									<label for="no-banorte"><span>No </span></label>
+								</div>
+								<div class="radio-input-solicitud">
+									<input type="radio" id="si-banorte" value="si-banorte" name="cuenta-banorte">
+									<label for="si-banorte"><span>Si </span></label>
+								</div>
+							</div>
+							<div class="col-md-4 col-xs-12">
+								<div class="form-group col-xs-12">
+									<label for="num-banorte">¿Tu número de banorte es?</label>
+									<input type="tel" class="form-control validate" id="num-banorte" placeholder="">
+									<span class="input-success"></span>
+									<span class="input-error"></span>
+								</div>
+							</div>
+							<div class="col-md-4 col-xs-12">
+								<p>¿Tienes cuenta en otro banco?</p>
+								<div class="radio-input-solicitud">
+									<input type="radio" id="no-otro-banco" value="no-otro-banco" name="cuenta-otro-banco">
+									<label for="no-otro-banco"><span>No </span></label>
+								</div>
+								<div class="radio-input-solicitud">
+									<input type="radio" id="si-otro-banco" value="si-otro-banco" name="cuenta-otro-banco">
+									<label for="si-otro-banco"><span>Si </span></label>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4 col-xs-12">
+								<div class="form-group col-xs-12">
+									<label for="otro-banco">Menciona el banco</label>
+									<input type="text" class="form-control validate" id="otro-banco" placeholder="">
+									<span class="input-success"></span>
+									<span class="input-error"></span>
+								</div>
+							</div>
+							<div class="col-md-4 col-xs-12">
+								<div class="form-group col-xs-12">
+									<label for="tipo-cuenta">¿Que tipo de cuenta es?</label>
+									<select class="form-control validate" id="tipo-cuenta">
+									<option value="p" selected>Ahorro</option>
+									<option value="r">Crédito</option>
+								</select>
+									<span class="input-success"></span>
+									<span class="input-error"></span>
+								</div>
+							</div>
+							<div class="col-md-4 col-xs-12">
+								<div class="form-group col-xs-12">
+									<label for="num-otro-banco">¿Tu número de cuenta es?</label>
+									<input type="text" class="form-control validate" id="num-otro-banco" placeholder="">
+									<span class="input-success"></span>
+									<span class="input-error"></span>
+								</div>
+							</div>
+						</div>
+						<hr>
+						<div class="col-md-12">
+							<h4>Referencias personales</h4>
+						</div>
+						<div class="row">
+							<div class="col-md-4 col-xs-12">
+								<div class="form-group col-xs-12">
+									<label for="nombre-ref-1">Nombre completo de la referencia 1</label>
+									<input type="text" class="form-control validate" id="nombre-ref-1" placeholder="">
+									<span class="input-success"></span>
+									<span class="input-error"></span>
+								</div>
+							</div>
+							<div class="col-md-4 col-xs-12">
+								<div class="form-group col-xs-12">
+									<label for="ref-1-parentezco">Parentezco</label>
+									<select class="form-control validate" id="ref-1-parentezco">
+									<option value="p" selected>Cónyugue</option>
+									<option value="r">Padre</option>
+								</select>
+									<span class="input-success"></span>
+									<span class="input-error"></span>
+								</div>
+							</div>
+							<div class="col-md-4 col-xs-12">
+								<div class="form-group col-xs-12">
+									<label for="tel-ref-1">¿Su número es?</label>
+									<input type="text" class="form-control validate" id="tel-ref-1" placeholder="">
+									<span class="input-success"></span>
+									<span class="input-error"></span>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4 col-xs-12">
+								<div class="form-group col-xs-12">
+									<label for="nombre-ref-2">Nombre completo de la referencia 2</label>
+									<input type="text" class="form-control validate" id="nombre-ref-2" placeholder="">
+									<span class="input-success"></span>
+									<span class="input-error"></span>
+								</div>
+							</div>
+							<div class="col-md-4 col-xs-12">
+								<div class="form-group col-xs-12">
+									<label for="ref-2-parentezco">Parentezco</label>
+									<select class="form-control validate" id="ref-2-parentezco">
+									<option value="p" selected>Cónyugue</option>
+									<option value="r">Padre</option>
+								</select>
+									<span class="input-success"></span>
+									<span class="input-error"></span>
+								</div>
+							</div>
+							<div class="col-md-4 col-xs-12">
+								<div class="form-group col-xs-12">
+									<label for="tel-ref-2">¿Su número es?</label>
+									<input type="text" class="form-control validate" id="tel-ref-2" placeholder="">
+									<span class="input-success"></span>
+									<span class="input-error"></span>
+								</div>
+							</div>
+						</div>
+						<hr>
+						<div class="col-md-12">
+							<h4>Empleo actual</h4>
+						</div>
+						<div class="row">
+							<div class="col-md-4 col-xs-12">
+								<div class="form-group col-xs-12">
+									<label for="empresa">Nombre de la empresa</label>
+									<input type="text" class="form-control validate" id="empresa" placeholder="">
+									<span class="input-success"></span>
+									<span class="input-error"></span>
+								</div>
+							</div>
+							<div class="col-md-4 col-xs-12">
+								<div class="form-group col-xs-12">
+									<label for="giro-empresa">¿Giro de la empresa?</label>
+									<select class="form-control validate" id="giro-empresa">
+									<option value="p" selected>Bancario</option>
+									<option value="r">Opcion 2</option>
+								</select>
+									<span class="input-success"></span>
+									<span class="input-error"></span>
+								</div>
+							</div>
+							<div class="col-md-4 col-xs-12">
+								<div class="form-group col-xs-12">
+									<label for="calle-empresa">Calle de su empresa</label>
+									<input type="text" class="form-control validate" id="calle-empresa" placeholder="">
+									<span class="input-success"></span>
+									<span class="input-error"></span>
+								</div>
+							</div>
+
+						</div>
+						<div class="row">
+							<div class="col-md-4 col-xs-12">
+								<div class="form-group col-xs-12">
+									<label for="num-ext-empresa">Número exterior</label>
+									<input type="text" class="form-control validate" id="num-ext-empresa" placeholder="">
+									<span class="input-success"></span>
+									<span class="input-error"></span>
+								</div>
+							</div>
+							<div class="col-md-4 col-xs-12">
+								<div class="form-group col-xs-12">
+									<label for="num-int-empresa">Número interior</label>
+									<input type="text" class="form-control validate" id="num-int-empresa" placeholder="">
+									<span class="input-success"></span>
+									<span class="input-error"></span>
+								</div>
+							</div>
+							<div class="col-md-4 col-xs-12">
+								<div class="form-group col-xs-12">
+									<label for="cp-empresa">Código postal</label>
+									<input type="text" class="form-control validate" id="cp-empresa" placeholder="">
+									<span class="input-success"></span>
+									<span class="input-error"></span>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4 col-xs-12">
+								<div class="form-group col-xs-12">
+									<label for="colonia-empresa">Colonia</label>
+									<select class="form-control validate" id="colonia-empresa" placeholder="">
+									<option value="m" selected>Del Carmen</option>
+									<option value="f">Opcion 2</option>
+								</select>
+									<span class="input-success"></span>
+									<span class="input-error"></span>
+								</div>
+							</div>
+							<div class="col-md-4 col-xs-12">
+								<div class="form-group col-xs-12">
+									<label for="delegacion-empresa">Delegación</label>
+									<input type="text" class="form-control validate" id="delegacion-empresa" placeholder="">
+									<span class="input-success"></span>
+									<span class="input-error"></span>
+								</div>
+							</div>
+							<div class="col-md-4 col-xs-12">
+								<div class="form-group col-xs-12">
+									<label for="municipio-empresa">Estado o municipio</label>
+									<input type="text" class="form-control validate" id="municipio-empresa" placeholder="">
+									<span class="input-success"></span>
+									<span class="input-error"></span>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12 right">
+							<a href="#3">Continuar <i class="fa fa-arrow-right"></i></a>
 						</div>
 					</div>
 					<div class="tab-pane" id="3">
+						<div class="container">
 						<div class="col-md-12">
 
 							<span class="line-after">Carga de documentos</span>
+							<p>Teniendo tus documentos podemos entregarte tu tarjeta de crédito en 2 días</p>
+
 						</div>
+							<div class="col-md-12">
+
+								<div class="panel-carga-docs">
+									<div class="col-xs-12">
+										<h4>Cargar identificación</h4>
+									</div>
+									<div class="col-md-2 panel-icons" id="icon-webcam">
+										<div class="panel-icon" data-toggle="modal" data-target="#modalWebCam">
+											<img src="img/webcam.svg" alt="">
+										</div>
+										<span>Webcam</span>
+									</div>
+									<div class="col-md-2 panel-icons" id="icon-pc">
+										<div class="panel-icon" data-toggle="modal" data-target="#modalComputadora">
+											<img src="img/imac.svg" alt="">
+										</div>
+										<span>Computadora</span>
+									</div>
+									<div class="col-md-2 panel-icons" id="icon-smarthphone">
+										<div class="panel-icon" data-toggle="modal" data-target="#modalComputadora">
+											<img src="img/smartphone.svg" alt="">
+										</div>
+										<span>Smartphone</span>
+									</div>
+
+								</div>
+								<div class="col-xs-12 panel-loader hidden" id="loader-identificacion">
+
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="panel-carga-docs">
+									<div class="col-xs-12">
+										<h4>Cargar comprobante de domicilio</h4>
+									</div>
+									<div class="col-md-2 panel-icons" id="icon-webcam">
+										<div class="panel-icon" data-toggle="modal" data-target="#modalWebCam">
+											<img src="img/webcam.svg" alt="">
+										</div>
+										<span>Webcam</span>
+									</div>
+									<div class="col-md-2 panel-icons" id="icon-pc">
+										<div class="panel-icon" data-toggle="modal" data-target="#modalComputadora">
+											<img src="img/imac.svg" alt="">
+										</div>
+										<span>Computadora</span>
+									</div>
+									<div class="col-md-2 panel-icons" id="icon-smarthphone">
+										<div class="panel-icon" data-toggle="modal" data-target="#modalComputadora">
+											<img src="img/smartphone.svg" alt="">
+										</div>
+										<span>Smartphone</span>
+									</div>
+									<div class="col-md-6 panel-icons" id="icon-smarthphone">
+										<div class="panel-icon" data-toggle="modal" data-target="#modalComputadora">
+											<img src="img/upload.svg" alt="">
+										</div>
+										<span>Arrastrar y soltar</span>
+									</div>
+
+								</div>
+								<div class="col-xs-12 panel-loader hidden" id="loader-comprobante-domicilio">
+
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="panel-carga-docs">
+									<div class="col-xs-12">
+										<h4>Cargar comprobante de ingresos</h4>
+									</div>
+									<div class="col-md-2 panel-icons" id="icon-webcam">
+										<div class="panel-icon" data-toggle="modal" data-target="#modalWebCam">
+											<img src="img/webcam.svg" alt="">
+										</div>
+										<span>Webcam</span>
+									</div>
+									<div class="col-md-2 panel-icons" id="icon-pc">
+										<div class="panel-icon" data-toggle="modal" data-target="#modalComputadora">
+											<img src="img/imac.svg" alt="">
+										</div>
+										<span>Computadora</span>
+									</div>
+									<div class="col-md-2 panel-icons" id="icon-smarthphone">
+										<div class="panel-icon" data-toggle="modal" data-target="#modalComputadora">
+											<img src="img/smartphone.svg" alt="">
+										</div>
+										<span>Smartphone</span>
+									</div>
+									<div class="col-md-6 panel-icons" id="icon-smarthphone">
+										<div class="panel-icon" data-toggle="modal" data-target="#modalComputadora">
+											<img src="img/upload.svg" alt="">
+										</div>
+										<span>Arrastrar y soltar</span>
+									</div>
+
+								</div>
+								<div class="col-xs-12 panel-loader hidden" id="loader-comprobante-ingresos">
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-12 text-center">
+						<a href="#3">Continuar <i class="fa fa-arrow-right"></i></a>
 					</div>
 				</div>
 			</div>
 		</section>
+
+		<!--modal webcam-->
+		<div class="modal" id="modalWebCam" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span><img src="img/cancel-music.svg" alt=""> Cerrar</span></button>
+
+					</div>
+					<div class="modal-body">
+						<div class="container modal-solicitud modal-docs">
+
+							<div class="row">
+								<div class="col-md-10 col-md-offset-1 col-xs-12">
+										<div class="panel">
+											<div class="panel-body">
+												<div class="col-md-12">
+
+														<h2><img src="img/webcam.svg" alt=""> Webcam</h2>
+														<p>Asegúrate de realizar una foto legible</p>
+
+												</div>
+												<div id="panels-webcam">
+
+													<div class="col-md-6 col-xs-12">
+														<h4 class="titulo-panel-carga">Capture el frente de su identificación</h4>
+														<div id="captura-frente-webcam" class="panel-captura-archivo">
+															<img src="img/shutter.svg"/>
+															<span>Capture frente</span>
+														</div>
+														<div id="verifica-frente-webcam" class="hidden">
+															<p>Verifica que se aprecien los datos de tu identificación</p>
+															<a id="btn-volver-webcam-frente">Volver a capturar</a>
+														</div>
+													</div>
+													<div class="col-md-6 col-xs-12">
+														<h4 class="titulo-panel-carga">Capture el tras de su identificación</h4>
+														<div id="captura-tras-webcam" class="panel-captura-archivo">
+															<img src="img/shutter.svg"/>
+															<span>Capture tras</span>
+														</div>
+														<div id="verifica-tras-webcam" class="hidden">
+															<p>Verifica que se aprecien los datos de tu identificación</p>
+															<a id="btn-volver-webcam-tras">Volver a capturar</a>
+														</div>
+													</div>
+													<div class="col-xs-12 text-center">
+														<button id="btn-submit-webcam-img" class="btn btn-red btn-round-corner">Subir archivos</button>
+														<div id="loader-webcam-img" class="row hidden">
+															<div class="sk-folding-cube">
+																<div class="sk-cube1 sk-cube"></div>
+																<div class="sk-cube2 sk-cube"></div>
+																<div class="sk-cube4 sk-cube"></div>
+																<div class="sk-cube3 sk-cube"></div>
+
+															</div>
+															<div class="center">
+																<span>Estamos cargando tus fotos</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div id="webcamFrente" class="row hidden">
+														<div class="col-xs-12 col-md-6">
+
+															<video id="videoFrente" width="480" height="320" autoplay></video>
+															<button class="btn btn-red btn-round-corner" id="snapFrente">Tomar foto</button>
+														</div>
+														<div class="col-xs-12 col-md-6">
+															<canvas id="canvasFrente" style="visibility: hidden" width="480" height="320"></canvas>
+														</div>
+												</div>
+												<div id="webcamTras" class="row hidden">
+														<div class="col-xs-12 col-md-6">
+
+															<video id="videoTras" width="480" height="320" autoplay></video>
+															<button class="btn btn-red btn-round-corner" id="snapTras">Tomar foto</button>
+														</div>
+														<div class="col-xs-12 col-md-6">
+															<canvas id="canvasTras" style="visibility: hidden" width="480" height="320"></canvas>
+														</div>
+												</div>
+
+											</div>
+										</div>
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal" id="modalComputadora" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span><img src="img/cancel-music.svg" alt=""> Cerrar</span></button>
+
+					</div>
+					<div class="modal-body">
+						<div class="container modal-solicitud modal-docs">
+
+							<div class="row">
+								<div class="col-md-10 col-md-offset-1 col-xs-12">
+										<div class="panel">
+											<div class="panel-body">
+												<div class="col-md-12">
+
+														<h2 id="title-upload-pc" class="hidden"><img src="img/imac.svg" alt=""> Computadora</h2>
+														<h2 id="title-upload-celular" class="hidden"><img src="img/smartphone.svg" alt=""> Celular</h2>
+														<p>Asegúrate de realizar una foto legible</p>
+
+												</div>
+												<div id="panels-pc">
+
+													<div class="col-md-6 col-xs-12">
+														<h4 class="titulo-panel-carga">Capture el frente de su identificación</h4>
+														<div id="captura-frente-pc" class="panel-captura-archivo">
+															<div>
+																<img src="img/shutter.svg"/>
+																<span>Capture frente</span>
+															</div>
+															<input type="file" accept="image/jpeg, image/png, application/pdf" />
+														</div>
+														<div id="verifica-frente-pc" class="hidden">
+															<p>Verifica que se aprecien los datos de tu identificación</p>
+															<a id="btn-volver-pc-frente">Volver a capturar</a>
+														</div>
+													</div>
+													<div class="col-md-6 col-xs-12">
+														<h4 class="titulo-panel-carga">Capture el tras de su identificación</h4>
+														<div id="captura-tras-pc" class="panel-captura-archivo">
+															<div>
+																<img src="img/shutter.svg"/>
+																<span>Capture tras</span>
+															</div>
+															<input type="file" accept="image/jpeg, image/png, application/pdf" />
+														</div>
+														<div id="verifica-tras-pc" class="hidden">
+															<p>Verifica que se aprecien los datos de tu identificación</p>
+															<a id="btn-volver-pc-tras">Volver a capturar</a>
+														</div>
+													</div>
+													<div class="col-xs-12 text-center">
+														<button id="btn-submit-pc-img" class="btn btn-red btn-round-corner">Subir archivos</button>
+														<div id="loader-pc-img" class="row hidden">
+															<div class="sk-folding-cube">
+																<div class="sk-cube1 sk-cube"></div>
+																<div class="sk-cube2 sk-cube"></div>
+																<div class="sk-cube4 sk-cube"></div>
+																<div class="sk-cube3 sk-cube"></div>
+
+															</div>
+															<div class="center">
+																<span>Estamos cargando tus fotos</span>
+															</div>
+														</div>
+													</div>
+												</div>
+
+											</div>
+										</div>
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
 
 		<footer id="footer">
@@ -348,7 +903,6 @@
 					</div>
 				</div>
 			</div>
-			<!-- modal fovissste/infonavit-->
 
 			<!-- .footer-top -->
 			<div class="footer-bottom">

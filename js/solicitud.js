@@ -64,10 +64,15 @@ function formatCurrency() {
 $.fn.exists = function() {
   return this.length > 0;
 }
+
 var valid = true;
-var isMobile = false;
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
- isMobile = true;
+ $('#icon-webcam').addClass('hidden');
+ $('#icon-pc').addClass('hidden');
+ $('#title-upload-celular').removeClass('hidden')
+}else{
+  $('#title-upload-pc').removeClass('hidden')
+  $('#icon-smarthphone').addClass('hidden');
 }
 
 const linksOptions = document.querySelectorAll('.scrollmenu a');
@@ -216,7 +221,7 @@ if ($('#celular').exists()) {
 }
 
 
-/* MODAL */
+/* Webcam */
 
 const panelActiveWebcam = $('#panel-webcam')
 const panelesAnexaId = $('.anexa-identificacion')
@@ -230,40 +235,89 @@ panelCargaSmartphone.click(function(){
   },3000)
 })
 
-panelActiveWebcam.click(function(){
-  $('#webcam').removeClass('hidden')
-  $('#optionsIdPhoto').addClass('hidden')
+capturaFrenteWebcam = $('#captura-frente-webcam');
+capturaTraseWebcam = $('#captura-tras-webcam');
+// Elements for taking the snapshot
+const canvasFrente = document.getElementById('canvasFrente');
+const canvasTras = document.getElementById('canvasTras');
+const contextFrente = canvasFrente.getContext('2d');
+const contextTras = canvasTras.getContext('2d');
+var imgFrente, imgTras; // para guardar las fotos que se va a subir
+$('#btn-volver-webcam-frente').click(function(){
+  $('#webcamFrente').removeClass('hidden')
+  $('#panels-webcam').addClass('hidden')
+})
+$('#btn-volver-webcam-tras').click(function(){
+  $('#webcamTras').removeClass('hidden')
+  $('#panels-webcam').addClass('hidden')
+})
+capturaFrenteWebcam.click(function(){
+  $('#webcamFrente').removeClass('hidden')
+  $('#panels-webcam').addClass('hidden')
 
   // Grab elements, create settings, etc.
-  const video = document.getElementById('video');
+  const videoFrente = document.getElementById('videoFrente');
 
-  // Get access to the camera!
-  if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+  if(!videoFrente.src){
+    // Get access to the camera!
+    if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
       // Not adding `{ audio: true }` since we only want image now
       navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
-          video.src = window.URL.createObjectURL(stream);
-          video.play();
+        videoFrente.src = window.URL.createObjectURL(stream);
+        videoFrente.play();
       });
+    }
   }
-
-  // Elements for taking the snapshot
-  const canvas = document.getElementById('canvas');
-  const context = canvas.getContext('2d');
-
   // Trigger photo take
-  document.getElementById("snap").addEventListener("click", function() {
-    context.drawImage(video, 0, 0, 480, 320);
-    // canvas.toDataURL() para guardar foto
+  document.getElementById("snapFrente").addEventListener("click", function() {
+    $('#webcamFrente').addClass('hidden')
+    $('#panels-webcam').removeClass('hidden')
+    contextFrente.drawImage(videoFrente, 0, 0, 480, 320);
+    var imgFrenteId = new Image();
+    imgFrenteId.src = canvasFrente.toDataURL();  // para mostrar la foto en el panel antes de subirla
+    imgFrenteId.style.width = "63%";
+    imgFrenteId.style.margin = "-60px";
+    $('#captura-frente-webcam').html('')
+    $('#captura-frente-webcam').append(imgFrenteId)
+    imgFrente = canvasFrente.toDataURL(); // colocar la foto para guardarse
+    $('#webcamFrente').addClass('hidden')
+    $('#verifica-frente-webcam').removeClass('hidden');
   });
 })
 
-panelesAnexaId.each(function(){
-  var panel = $(this)
-  panel.click(function(){
-    $('#frente-reverso').removeClass('hidden')
-    $('#optionsIdPhoto').addClass('hidden')
+capturaTraseWebcam.click(function(){
+  $('#webcamTras').removeClass('hidden')
+  $('#panels-webcam').addClass('hidden')
 
-  })
+  // Grab elements, create settings, etc.
+  const videoTras = document.getElementById('videoTras');
+
+  if(!videoTras.src){
+    // Get access to the camera!
+    if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+      // Not adding `{ audio: true }` since we only want image now
+      navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
+        videoTras.src = window.URL.createObjectURL(stream);
+        videoTras.play();
+      });
+    }
+  }
+
+  // Trigger photo take
+  document.getElementById("snapTras").addEventListener("click", function() {
+    $('#webcamTras').addClass('hidden')
+    $('#panels-webcam').removeClass('hidden')
+    contextTras.drawImage(videoTras, 0, 0, 480, 320);
+    var imgTrasId = new Image();
+    imgTrasId.src = canvasTras.toDataURL();  // para mostrar la foto en el panel antes de subirla
+    imgTrasId.style.width = "63%";
+    imgTrasId.style.margin = "-60px";
+    $('#captura-tras-webcam').html('')
+    $('#captura-tras-webcam').append(imgTrasId)
+    imgTras = canvasTras.toDataURL(); // colocar la foto para guardarse
+    $('#webcamTras').addClass('hidden')
+    $('#verifica-tras-webcam').removeClass('hidden');
+  });
 })
 
 $('input[type=file]').change(function() {
@@ -275,10 +329,20 @@ $('input[type=file]').change(function() {
   }, 3000)
 })
 
-const saveImageBtn = $('#savePhotoWebcam')
-saveImageBtn.click(function() {
-  $('#optionsIdPhoto').removeClass('hidden')
-  $('#webcam').addClass('hidden')
+$('#btn-submit-webcam-img').click(function(){
+  $('#loader-webcam-img').removeClass('hidden')
+  setTimeout(function(){
+    $('#loader-webcam-img').addClass('hidden')
+    $('#modalWebCam').modal('hide');
+  },3000)
+})
+
+$('#btn-submit-pc-img').click(function(){
+  $('#loader-pc-img').removeClass('hidden')
+  setTimeout(function(){
+    $('#loader-pc-img').addClass('hidden')
+    $('#modalComputadora').modal('hide');
+  },3000)
 })
 
 /* COPY to Clipboard */
@@ -295,3 +359,83 @@ $('#copy-clipboard').click(function(){
     tooltip.innerHTML = "Folio copiado: " + folio;
   document.execCommand('copy');
 })
+
+/* upload pc or smartphone */
+$(function() {
+
+  $('#captura-frente-pc').on('dragover', function() {
+    $(this).addClass('hover');
+  });
+
+  $('#captura-frente-pc').on('dragleave', function() {
+    $(this).removeClass('hover');
+  });
+
+  $('#captura-frente-pc input').on('change', function(e) {
+    var file = this.files[0];
+
+    $('#captura-frente-pc').removeClass('hover');
+
+    if (this.accept && $.inArray(file.type, this.accept.split(/, ?/)) == -1) {
+      return alert('File type not allowed.');
+    }
+
+    $('#captura-frente-pc').addClass('dropped');
+    $('#captura-frente-pc img').remove();
+
+    if ((/^image\/(gif|png|jpg|jpeg)$/i).test(file.type)) {
+      var reader = new FileReader(file);
+
+      reader.readAsDataURL(file);
+
+      reader.onload = function(e) {
+        var data = e.target.result,
+            $img = $('<img />').attr('src', data).fadeIn();
+        $('#captura-frente-pc').css({'padding':'0'})
+        $('#captura-frente-pc div').html($img);
+      };
+    } else {
+      var ext = file.name.split('.').pop();
+
+      $('#captura-frente-pc div').html(ext);
+    }
+  });
+
+  $('#captura-tras-pc').on('dragover', function() {
+    $(this).addClass('hover');
+  });
+
+  $('#captura-tras-pc').on('dragleave', function() {
+    $(this).removeClass('hover');
+  });
+
+  $('#captura-tras-pc input').on('change', function(e) {
+    var file = this.files[0];
+
+    $('#captura-tras-pc').removeClass('hover');
+
+    if (this.accept && $.inArray(file.type, this.accept.split(/, ?/)) == -1) {
+      return alert('File type not allowed.');
+    }
+
+    $('#captura-tras-pc').addClass('dropped');
+    $('#captura-tras-pc img').remove();
+
+    if ((/^image\/(gif|png|jpg|jpeg)$/i).test(file.type)) {
+      var reader = new FileReader(file);
+
+      reader.readAsDataURL(file);
+
+      reader.onload = function(e) {
+        var data = e.target.result,
+            $img = $('<img />').attr('src', data).fadeIn();
+        $('#captura-tras-pc').css({'padding':'0'})
+        $('#captura-tras-pc div').html($img);
+      };
+    } else {
+      var ext = file.name.split('.').pop();
+
+      $('#captura-tras-pc div').html(ext);
+    }
+  });
+});
