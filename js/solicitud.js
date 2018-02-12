@@ -439,3 +439,82 @@ $(function() {
     }
   });
 });
+
+
+/* progress bar */
+$('.panel-comprobante input').on('change', function(e) {
+  $('#loader-comprobante-domicilio').removeClass('hidden');
+  $('#carga-comprobante-domicilio').addClass('hidden')
+  setTimeout(function(){
+    animateComprobanteDomProgressBar()
+  },500)
+})
+
+var closeIdUploaded = document.getElementById("close-id-uploaded");
+var closeComprobanteUploaded = document.getElementById("close-comprobante-uploaded");
+var closeComprobanteIngresosUploaded = document.getElementById("close-ingresos-uploaded");
+
+closeIdUploaded.addEventListener('click',function(){
+  $('#loader-identificacion').addClass('hidden');
+})
+
+closeComprobanteUploaded.addEventListener('click',function(){
+  $('#loader-comprobante-domicilio').addClass('hidden');
+})
+closeComprobanteIngresosUploaded.addEventListener('click',function(){
+  $('#loader-comprobante-ingresos').addClass('hidden');
+})
+
+function animateIdProgressBar() {
+  var elem = document.getElementById("idProgBar");
+  var width = 10;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+      elem.classList.add('done');
+      elem.innerHTML = 'Identificación cargada';
+      closeIdUploaded.classList.remove('hidden');
+    } else {
+      width++;
+      elem.style.width = width + '%';
+      elem.innerHTML = width * 1  + '%';
+    }
+  }
+}
+
+function animateComprobanteDomProgressBar() {
+  var elem = document.getElementById("CompDomBar");
+  var width = 10;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+      elem.classList.add('done');
+      elem.innerHTML = 'Comprobante de domicilio cargado';
+      closeComprobanteUploaded.classList.remove('hidden');
+    } else {
+      width++;
+      elem.style.width = width + '%';
+      elem.innerHTML = width * 1  + '%';
+    }
+  }
+}
+
+function animateComprobanteIngProgressBar() {
+  var elem = document.getElementById("CompIngBar");
+  var width = 10;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+      elem.classList.add('done');
+      elem.innerHTML = 'Comprobante de ingresos cargado';
+      closeComprobanteIngresosUploaded.classList.remove('hidden');
+    } else {
+      width++;
+      elem.style.width = width + '%';
+      elem.innerHTML = width * 1  + '%';
+    }
+  }
+}

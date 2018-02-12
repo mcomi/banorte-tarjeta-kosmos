@@ -773,6 +773,28 @@ input[type=radio] {
   padding: 10px 0;
   margin: 20px 20px; }
 
+.myProgress {
+  width: 100%;
+  background-color: #f1f1f1;
+  border-radius: 20px; }
+
+.myBar {
+  width: 10%;
+  height: 40px;
+  background: #B7B7B7;
+  border-radius: 20px;
+  text-align: center;
+  line-height: 40px;
+  color: white; }
+
+.myBar.done {
+  background: #FFA400; }
+
+.myProgress img {
+  position: absolute;
+  right: 5px;
+  top: -20px; }
+
 #modalSolicitudDatosBasicos .modal-content {
   height: 100%; }
 
@@ -1073,7 +1095,8 @@ select.form-control:after {
 .modal-docs {
   height: 100%; }
 
-#captura-frente-pc div, #captura-tras-pc div {
+#captura-frente-pc div, #captura-tras-pc div,
+#panel-upload-pc div, #panel-upload-celular div {
   top: 0;
   right: 0;
   bottom: 0;
@@ -1085,7 +1108,8 @@ select.form-control:after {
   width: auto;
   max-height: 250px; }
 
-#captura-frente-pc [type="file"], #captura-tras-pc [type="file"] {
+#captura-frente-pc [type="file"], #captura-tras-pc [type="file"],
+#panel-upload-pc [type="file"], #panel-upload-celular [type="file"] {
   cursor: pointer;
   position: absolute;
   opacity: 0;
@@ -1761,7 +1785,20 @@ body {
   .panel-body {
     padding: 0; }
   .modal-solicitud .col-xs-12 {
-    padding: 0; } }
+    padding: 0; }
+  .panel-carga-docs {
+    min-height: 220px; }
+  .just-desktop {
+    display: none; }
+  .nav-folio {
+    padding-right: 0;
+    text-align: left;
+    line-height: 36px; }
+  .nav > li {
+    position: relative;
+    display: inline-block; }
+  .tarjetas {
+    margin-top: -107px; } }
 
 @media (min-width: 801px) {
   .navbar-nav {

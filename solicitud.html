@@ -319,7 +319,7 @@
               </div>
 						</div>
 						<div class="col-md-12 right">
-							<a href="solicitud.html">Continuar <i class="fa fa-arrow-right"></i></a>
+							<a>Continuar <i class="fa fa-arrow-right"></i></a>
 						</div>
 					</div>
 
@@ -617,54 +617,61 @@
 									<div class="col-xs-12">
 										<h4>Cargar identificación</h4>
 									</div>
-									<div class="col-md-2 panel-icons" id="icon-webcam">
+									<div class="col-md-2 col-xs-12 panel-icons just-desktop" id="icon-webcam">
 										<div class="panel-icon" data-toggle="modal" data-target="#modalWebCam">
 											<img src="img/webcam.svg" alt="">
 										</div>
 										<span>Webcam</span>
 									</div>
-									<div class="col-md-2 panel-icons" id="icon-pc">
+									<div class="col-md-2 col-xs-12 panel-icons just-desktop" id="icon-pc">
 										<div class="panel-icon" data-toggle="modal" data-target="#modalComputadora">
 											<img src="img/imac.svg" alt="">
 										</div>
 										<span>Computadora</span>
 									</div>
-									<div class="col-md-2 panel-icons" id="icon-smarthphone">
+									<div class="col-md-2 col-xs-12 panel-icons" id="icon-smarthphone">
 										<div class="panel-icon" data-toggle="modal" data-target="#modalComputadora">
 											<img src="img/smartphone.svg" alt="">
 										</div>
 										<span>Smartphone</span>
 									</div>
-
-								</div>
-								<div class="col-xs-12 panel-loader hidden" id="loader-identificacion">
 
 								</div>
 							</div>
+							<div class="col-md-12 panel-loader hidden" id="loader-identificacion">
+								<div class="myProgress">
+									<img src="img/Shape.svg" alt="" class="hidden" id="close-id-uploaded">
+									<div id="idProgBar" class="myBar">Cargando..</div>
+								</div>
+							</div>
 							<div class="col-md-12">
-								<div class="panel-carga-docs">
+								<div class="panel-carga-docs" id="carga-comprobante-domicilio">
 									<div class="col-xs-12">
 										<h4>Cargar comprobante de domicilio</h4>
 									</div>
-									<div class="col-md-2 panel-icons" id="icon-webcam">
+									<div class="col-md-2 col-xs-12 panel-icons just-desktop" id="icon-webcam">
 										<div class="panel-icon" data-toggle="modal" data-target="#modalWebCam">
 											<img src="img/webcam.svg" alt="">
 										</div>
 										<span>Webcam</span>
 									</div>
-									<div class="col-md-2 panel-icons" id="icon-pc">
-										<div class="panel-icon" data-toggle="modal" data-target="#modalComputadora">
+									<div class="col-md-2 col-xs-12 panel-icons just-desktop" id="icon-pc">
+										<div id="panel-upload-pc" class="panel-icon panel-comprobante">
+											<div></div>
 											<img src="img/imac.svg" alt="">
+											<input type="file" accept="image/jpeg, image/png, application/pdf" />
 										</div>
 										<span>Computadora</span>
 									</div>
-									<div class="col-md-2 panel-icons" id="icon-smarthphone">
-										<div class="panel-icon" data-toggle="modal" data-target="#modalComputadora">
+									<div class="col-md-2 col-xs-12 panel-icons" id="icon-smarthphone">
+										<div id="panel-upload-celular" class="panel-icon panel-comprobante">
+											<div></div>
 											<img src="img/smartphone.svg" alt="">
+											<input type="file" accept="image/jpeg, image/png, application/pdf" />
 										</div>
 										<span>Smartphone</span>
 									</div>
-									<div class="col-md-6 panel-icons" id="icon-smarthphone">
+									<div class="col-md-6 col-xs-12 panel-icons just-desktop" id="icon-smarthphone">
 										<div class="panel-icon" data-toggle="modal" data-target="#modalComputadora">
 											<img src="img/upload.svg" alt="">
 										</div>
@@ -672,8 +679,11 @@
 									</div>
 
 								</div>
-								<div class="col-xs-12 panel-loader hidden" id="loader-comprobante-domicilio">
-
+							</div>
+							<div class="col-md-12 panel-loader hidden" id="loader-comprobante-domicilio">
+								<div class="myProgress">
+									<img src="img/Shape.svg" alt="" class="hidden" id="close-comprobante-uploaded">
+									<div id="CompDomBar" class="myBar">Cargando..</div>
 								</div>
 							</div>
 							<div class="col-md-12">
@@ -681,25 +691,25 @@
 									<div class="col-xs-12">
 										<h4>Cargar comprobante de ingresos</h4>
 									</div>
-									<div class="col-md-2 panel-icons" id="icon-webcam">
+									<div class="col-md-2 col-xs-12 panel-icons just-desktop" id="icon-webcam">
 										<div class="panel-icon" data-toggle="modal" data-target="#modalWebCam">
 											<img src="img/webcam.svg" alt="">
 										</div>
 										<span>Webcam</span>
 									</div>
-									<div class="col-md-2 panel-icons" id="icon-pc">
+									<div class="col-md-2 col-xs-12 panel-icons just-desktop" id="icon-pc">
 										<div class="panel-icon" data-toggle="modal" data-target="#modalComputadora">
 											<img src="img/imac.svg" alt="">
 										</div>
 										<span>Computadora</span>
 									</div>
-									<div class="col-md-2 panel-icons" id="icon-smarthphone">
+									<div class="col-md-2 col-xs-12 panel-icons" id="icon-smarthphone">
 										<div class="panel-icon" data-toggle="modal" data-target="#modalComputadora">
 											<img src="img/smartphone.svg" alt="">
 										</div>
 										<span>Smartphone</span>
 									</div>
-									<div class="col-md-6 panel-icons" id="icon-smarthphone">
+									<div class="col-md-6 col-xs-12 panel-icons just-desktop" id="icon-smarthphone">
 										<div class="panel-icon" data-toggle="modal" data-target="#modalComputadora">
 											<img src="img/upload.svg" alt="">
 										</div>
@@ -707,14 +717,17 @@
 									</div>
 
 								</div>
-								<div class="col-xs-12 panel-loader hidden" id="loader-comprobante-ingresos">
-
+							</div>
+							<div class="col-xs-12 panel-loader hidden" id="loader-comprobante-ingresos">
+								<div class="myProgress">
+									<img src="img/Shape.svg" alt="" class="hidden" id="close-ingresos-uploaded">
+									<div id="CompIngBar" class="myBar">Cargando..</div>
 								</div>
 							</div>
 						</div>
-					</div>
-					<div class="col-md-12 text-center">
-						<a href="#3">Continuar <i class="fa fa-arrow-right"></i></a>
+						<div class="col-md-12 text-center">
+							<a href="#3">Continuar <i class="fa fa-arrow-right"></i></a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -912,7 +925,7 @@
 
 							<div class="text-footer-bottom">Términos Legales | Aviso de Privacidad | Consulta los costos y las comisiones de nuestros productos 2017 Grupo Financiero Banorte. Derechos reservados.</div>
 						</div>
-						<div class="phone-cont col-xs-6 col-sm-6 col-md-6">
+						<div class="phone-cont col-xs-12 col-sm-6 col-md-6">
 							<div class="col-md-12 tel">
 								55 0000 0000
 							</div>
