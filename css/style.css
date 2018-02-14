@@ -795,6 +795,90 @@ input[type=radio] {
   right: 5px;
   top: -20px; }
 
+.panel-status {
+  background: #FFFFFF;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  margin: 0 auto;
+  position: relative;
+  height: auto;
+  text-align: center;
+  padding: 20px;
+  margin-top: -100px;
+  margin-bottom: 20px;
+  margin-left: 20%;
+  margin-right: 20%;
+  display: inline-block; }
+
+.panel-status-content {
+  min-height: 610px; }
+
+.panel-status-content.rechazo {
+  min-height: 51vh;
+  padding: 40px 40px; }
+
+.home.small-content #footer {
+  position: absolute;
+  bottom: 0; }
+
+.panel-status .panel-tarjeta {
+  margin: 25px 27%; }
+
+.panel-status .status-title {
+  font-family: 'Gotham medium';
+  font-size: 36px;
+  color: #4E4044;
+  letter-spacing: 0;
+  line-height: 40px; }
+
+h3.status-title ~ p {
+  font-family: 'Gotham medium';
+  font-size: 14px;
+  color: #4E4044;
+  letter-spacing: 0;
+  line-height: 16px; }
+
+p.cat {
+  font-family: 'Gotham' !important;
+  font-size: 18px !important;
+  letter-spacing: 0 !important;
+  line-height: 20px !important; }
+
+p.cat span {
+  display: block; }
+
+p.terminos a {
+  text-decoration: none;
+  font-size: 12px;
+  color: #EB0029;
+  letter-spacing: 0;
+  line-height: 16px;
+  font-family: 'Gotham medium'; }
+
+.continue-link {
+  padding: 10px 0; }
+
+.continue-link a {
+  color: #EB0029;
+  text-decoration: none; }
+
+.panel-tarjeta-text p.linea-credito {
+  font-size: 14px;
+  color: #4E4044;
+  letter-spacing: 0;
+  line-height: 16px;
+  padding: 20px;
+  text-align: center; }
+
+.panel-tarjeta-text p.linea-credito span {
+  font-family: 'Gotham medium';
+  font-size: 20px;
+  color: #FFA400;
+  letter-spacing: 0;
+  line-height: 16px;
+  display: block;
+  padding: 20px; }
+
 #modalSolicitudDatosBasicos .modal-content {
   height: 100%; }
 
@@ -1668,8 +1752,8 @@ body {
 
 .nav-solicitud {
   background-color: #F4F4F4 !important;
-  height: 180px !important;
-  background-image: url("../img/couple-bg.jpg");
+  height: 200px !important;
+  background-image: url("../img/couple-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: 35%; }
@@ -1798,7 +1882,13 @@ body {
     position: relative;
     display: inline-block; }
   .tarjetas {
-    margin-top: -107px; } }
+    margin-top: -107px; }
+  .slick-slide {
+    min-height: 390px; }
+  #cotizador h1, .faq h1 {
+    padding-top: 15px; }
+  .icons-row p.question-title {
+    line-height: 21px; } }
 
 @media (min-width: 801px) {
   .navbar-nav {
