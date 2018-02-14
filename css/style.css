@@ -817,10 +817,6 @@ input[type=radio] {
   min-height: 51vh;
   padding: 40px 40px; }
 
-.home.small-content #footer {
-  position: absolute;
-  bottom: 0; }
-
 .panel-status .panel-tarjeta {
   margin: 25px 27%; }
 
@@ -1821,7 +1817,10 @@ body {
 /* tablet, landscape iPad, lo-res laptops ands desktops */
 @media (min-width: 1281px) {
   .header-section {
-    padding-top: 6%; } }
+    padding-top: 6%; }
+  .home.small-content #footer {
+    position: absolute;
+    bottom: 0; } }
 
 @media (min-width: 1115px) {
   span.nav-expander {
