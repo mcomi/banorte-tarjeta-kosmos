@@ -4,6 +4,7 @@ $.fn.exists = function() {
 
 var actividad = ''
 var ingreso = ''
+var edad = ''
 
 $('.category').click(function() {
     if($(this).data('category-actividad') != undefined){
@@ -26,7 +27,7 @@ $('.category').click(function() {
         $('#cuanto-ganas').removeClass('hidden');
         $('#cuanto-ganas').animate2('bounceInLeft');
       }
-      if(actividad != '' && ingreso != ''){
+      if(actividad != '' && ingreso != '' && edad != ''){
         $('#icono-elimina-ambos').removeClass('hidden');
         revisaPropuestas(actividad, ingreso);
       }else {
@@ -42,6 +43,7 @@ $('.category').click(function() {
       clone.appendTo('#eleccion-ingreso')
       $('#eleccion-ingreso .category').addClass('active');
       $('#cuanto-ganas').addClass('hidden').animate2('fadeOutDown');
+      $('#que-edad').removeClass('hidden').animate2('bounceInLeft');
       var minusSymbol = $('#eleccion-ingreso .category').find('.remove-symbol');
       minusSymbol.removeClass('hidden');
       minusSymbol.click(function(){
@@ -53,7 +55,7 @@ $('.category').click(function() {
           $('#opciones-filtradas').addClass('hidden');
         }
       })
-      if(actividad != '' && ingreso != ''){
+      if(actividad != '' && ingreso != '' && edad != ''){
         $('#icono-elimina-ambos').removeClass('hidden');
         revisaPropuestas(actividad, ingreso);
       }else {
@@ -62,7 +64,32 @@ $('.category').click(function() {
         }
       }
     }
-
+    if($(this).data('category-edad') != undefined){
+      edad = $(this).data('category-edad');
+      var clone = $(this).clone();
+      clone.appendTo('#eleccion-edad')
+      $('#eleccion-edad .category').addClass('active');
+      $('#que-edad').addClass('hidden').animate2('fadeOutDown');
+      var minusSymbol = $('#eleccion-edad .category').find('.remove-symbol');
+      minusSymbol.removeClass('hidden');
+      minusSymbol.click(function(){
+        $('#eleccion-edad').html('')
+        edad = ''
+        $('#que-edad').removeClass('hidden').animate2('bounceInLeft');
+        $('#icono-elimina-ambos').addClass('hidden');
+        if(!$('#opciones-filtradas').hasClass('hidden')){
+          $('#opciones-filtradas').addClass('hidden');
+        }
+      })
+      if(actividad != '' && ingreso != ''  && edad != ''){
+        $('#icono-elimina-ambos').removeClass('hidden');
+        revisaPropuestas(actividad, ingreso);
+      }else {
+        if(!$('#opciones-filtradas').hasClass('hidden')){
+          $('#opciones-filtradas').addClass('hidden').animate2('fadeOutDown');
+        }
+      }
+    }
 });
 
 function revisaPropuestas() {
@@ -75,6 +102,7 @@ $('#icono-elimina-ambos').click(function(){
   ingreso = '';
   $('#eleccion-ingreso').html('')
   $('#eleccion-actividad').html('')
+  $('#eleccion-edad').html('')
   $('#que-hacer').removeClass('hidden').animate2('bounceInLeft');
   $('#icono-elimina-ambos').addClass('hidden');
   $('#opciones-filtradas').addClass('hidden');
@@ -160,13 +188,13 @@ olvideFolioLink.addEventListener('click', function(){
   document.getElementById('olvide-folio').classList.remove('hidden');
 })
 
-document.getElementById('btn-solicita-sms').addEventListener('click', function(){
-var numCelular = document.getElementById('cel').value;
+document.getElementById('btn-solicita-sms-folio-olvidado').addEventListener('click', function(){
+var numCelular = document.getElementById('cel-olvide-folio').value;
   //solicitaFolioSms()
   console.log(numCelular);
 
   document.getElementById('olvide-folio').classList.add('hidden');
-  document.getElementById('input-sms-code').classList.remove('hidden');
+  document.getElementById('input-sms-folio-olvidado').classList.remove('hidden');
 })
 
 // Quote Carousel
@@ -223,11 +251,31 @@ $('#quote-carousel').carousel({
     }
   });
 
+  $(".code-input-olvidado").bind('keyup', function() {
+    var indexInput = 0;
+    var value = $(this).val()
+    var regex = /^\d+$/
+    if (regex.test(value)) {
+      if (indexInput < 5)
+        $(this).next().focus()
+      indexInput++
+    }
+  });
+
   // formatea el campo de telefono
 
   if ($('#celular').exists()) {
 
     let cleave = new Cleave('#celular', {
+      phone: true,
+      phoneRegionCode: 'MX'
+    });
+
+  }
+
+
+  if ($('#cel-olvide-folio').exists()) {
+    let cleave = new Cleave('#cel-olvide-folio', {
       phone: true,
       phoneRegionCode: 'MX'
     });

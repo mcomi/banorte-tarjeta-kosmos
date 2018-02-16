@@ -233,9 +233,12 @@
 					<div class="col-md-2 col-xs-6" id="eleccion-ingreso">
 
 					</div>
+					<div class="col-md-2 col-xs-6" id="eleccion-edad">
+
+					</div>
 					<div class="col-md-2 col-xs-6 hidden" id="icono-elimina-ambos">
 						<img src="img/garbage.svg" alt="">
-						Eliminar ambos
+						Eliminar todos
 					</div>
 				</div>
 				<div class="row icons-row" id="que-hacer">
@@ -326,6 +329,35 @@
 							<p>+ 20 mil pesos</p>
 						</div>
 					</div>
+
+				</div>
+				<div class="row icons-row hidden" id="que-edad">
+					<div class="col-md-12">
+
+						<p class="question-title" id="category-actividad-question">¿Qué edad tienes?</p>
+					</div>
+					<div class="col-md-2 col-xs-6 mobile-padding">
+						<div class="category" data-category-edad="18">
+							<img src="img/minus-symbol.svg" alt="" class="remove-symbol hidden">
+							<img src="img/age_red.svg" class="svg"/>
+							<p>18 a 25 años</p>
+						</div>
+					</div>
+					<div class="col-md-2 col-xs-6 mobile-padding">
+						<div class="category" data-category-edad="25">
+							<img src="img/minus-symbol.svg" alt="" class="remove-symbol hidden">
+							<img src="img/age_red.svg" class="svg"/>
+							<p>25 a 64 años</p>
+						</div>
+					</div>
+					<div class="col-md-2 col-xs-6 mobile-padding">
+						<div class="category" data-category-edad="64">
+							<img src="img/minus-symbol.svg" alt="" class="remove-symbol hidden">
+							<img src="img/age_red.svg" class="svg"/>
+							<p>más de 64 años</p>
+						</div>
+					</div>
+
 
 				</div>
 				<div class="row icons-row hidden" id="opciones-filtradas">
@@ -544,7 +576,7 @@
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times; Cerrar</span></button>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><img src="img/cancel-music.svg" alt=""> Cerrar</span></button>
 
 					</div>
 					<div class="modal-body">
@@ -574,7 +606,7 @@
 									<div class="col-md-7">
 										<h2>Oro de Banorte</h2>
 										<p class="description">Apóyate en tu tarjeta para cumplir tus sueños y recibe valiosos beneficios todo el año</p>
-										<button class="btn btn-red btn-round-corner">Solicitar</button>
+										<button class="btn btn-red btn-round-corner" data-toggle="modal" data-target="#modalSolicitudDatosBasicos">Solicitar</button>
 									</div>
 									<div class="col-md-12">
 										<input type="checkbox" class="read-more-state" id="info-1" />
@@ -598,7 +630,7 @@
 											<div class="col-md-6">
 
 												<div class="right">
-													<button class="btn btn-red btn-round-corner">Solicitar</button>
+													<button class="btn btn-red btn-round-corner" data-toggle="modal" data-target="#modalSolicitudDatosBasicos">Solicitar</button>
 												</div>
 											</div>
 										</div>
