@@ -1920,7 +1920,7 @@ body {
 
 /* importamos responsive al final */
 /* tablet, landscape iPad, lo-res laptops ands desktops */
-@media (max-height: 650px) {
+@media (max-height: 664px) {
   .tarjetas {
     margin-top: -176px; }
   #landing-section {
