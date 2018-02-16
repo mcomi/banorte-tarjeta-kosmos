@@ -1920,6 +1920,12 @@ body {
 
 /* importamos responsive al final */
 /* tablet, landscape iPad, lo-res laptops ands desktops */
+@media (max-height: 650px) {
+  .tarjetas {
+    margin-top: -176px; }
+  #landing-section {
+    height: 45%; } }
+
 @media (min-width: 1281px) {
   .header-section {
     padding-top: 6%; }
