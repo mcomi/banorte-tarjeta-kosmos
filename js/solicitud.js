@@ -160,9 +160,39 @@ selectsSolicitud.each(function() {
 function toggleChevron(e) {
   $(e.target).prev('.panel-heading').find("i").toggleClass('fa-minus fa-plus');
 }
+var valid = true;
+var isMobile = false;
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+ isMobile = true;
+}
+var step = 'datos-personales';
+$('.nav-btn').on('click', function(e) {
+  e.preventDefault()
+  if(isMobile){
 
-// $('#accordion').on('hidden.bs.collapse', toggleChevron);
-// $('#accordion').on('shown.bs.collapse', toggleChevron);
+    $(this).closest('.collapse').collapse('hide')
+    $(this).closest('.panel').hide()
+    step = $(this).closest('.panel').next().find('.collapse').attr('id')
+    console.log(step)
+    $(this).closest('.panel').next().show()
+    $(this).closest('.panel').next().find('.collapse').collapse('show')
+  }else{
+    $(this).closest('.collapse').collapse('hide')
+    console.log($(this))
+    $(this).closest('.panel').next().find('.collapse').collapse('show')
+  }
+
+})
+
+$('a[data-toggle]').on('click', function(e) {
+  console.log($(this))
+  // Panel that is currently open
+  var panel = $('div.in');
+  if (!valid) {
+    alert('Sorry panel ' + panel[0].id + ' not validated');
+    e.stopPropagation();
+  }
+});
 
 $('.panel-default').on('show.bs.collapse', function() {
   $(this).addClass('active');
