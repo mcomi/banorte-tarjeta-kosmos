@@ -168,19 +168,11 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 var step = 'datos-personales';
 $('.nav-btn').on('click', function(e) {
   e.preventDefault()
-  if(isMobile){
 
-    $(this).closest('.collapse').collapse('hide')
-    $(this).closest('.panel').hide()
-    step = $(this).closest('.panel').next().find('.collapse').attr('id')
-    console.log(step)
-    $(this).closest('.panel').next().show()
-    $(this).closest('.panel').next().find('.collapse').collapse('show')
-  }else{
     $(this).closest('.collapse').collapse('hide')
     console.log($(this))
     $(this).closest('.panel').next().find('.collapse').collapse('show')
-  }
+
 
 })
 
@@ -228,6 +220,13 @@ $("input[name='domicilio_acreditado']").click(function() {
   }
 });
 
+function pasarTabDatosComplementarios() {
+  $('#link-datos-complementarios').click()
+}
+
+function pasarTabCargaDocs(){
+  $('#link-carga-docs').click()
+}
 // al ingresar el codigo SMS recibido, si se escribe un numero paso enseguida al siguiente input para una facil captura del codigo
 $(".code-input").bind('keyup', function() {
   var indexInput = 0;

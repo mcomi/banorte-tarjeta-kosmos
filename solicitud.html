@@ -48,20 +48,26 @@
 	<div class="navbar navbar-default">
 		<div class="container">
 			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
 				<a class="navbar-brand" href="#">
 				<img src="img/logo_banorte_bco.svg" alt="">
 			</a>
-				<span id="nav-expander" class="nav-expander fixed">
-				<img src="img/icons/menu.png" alt="">
-			</span>
 			</div>
-			<ul id="desktop-menu" class="nav navbar-nav">
-				<li><a href="#">Elegir tarjeta</a></li>
-				<li><a href="#">Pasos para contratación</a></li>
-				<li><a href="#">Preguntas</a></li>
-				<li><a href="#">Testimonios</a></li>
-				<li data-toggle="modal" data-target="#modalConsultaFolio"><img src="img/hand-with-smartphone.svg" alt=""> Ver mi status</li>
-			</ul>
+			<div id="navbar" class="navbar-collapse collapse">
+
+				<ul id="desktop-menu" class="nav navbar-nav">
+					<li><a href="#">Elegir tarjeta</a></li>
+					<li><a href="#">Pasos para contratación</a></li>
+					<li><a href="#">Preguntas</a></li>
+					<li><a href="#">Testimonios</a></li>
+					<li data-toggle="modal" data-target="#modalConsultaFolio"><img src="img/hand-with-smartphone.svg" alt=""> Ver mi status</li>
+				</ul>
+			</div>
 		</div>
 		<!-- /.container-fluid -->
 	</div>
@@ -85,9 +91,9 @@
 					<li class="active">
 						<a href="#1" data-toggle="tab">1. Datos generales</a>
 					</li>
-					<li><a href="#2" data-toggle="tab">2. Datos complementarios</a>
+					<li><a href="#2" data-toggle="tab" id="link-datos-complementarios">2. Datos complementarios</a>
 					</li>
-					<li><a href="#3" data-toggle="tab">3. Carga de documentos</a>
+					<li><a href="#3" data-toggle="tab" id="link-carga-docs">3. Carga de documentos</a>
 					</li>
 				</ul>
 
@@ -393,7 +399,7 @@
 										</div>
 									</div>
 									<div class="col-md-12 right">
-										<a>Continuar <i class="fa fa-arrow-right"></i></a>
+										<a onclick="pasarTabDatosComplementarios()">Continuar <i class="fa fa-arrow-right"></i></a>
 									</div>
 								</div>
 								</div>
@@ -687,7 +693,7 @@
 							</div>
 						</div>
 						<div class="col-md-12 right">
-							<a href="#3">Continuar <i class="fa fa-arrow-right"></i></a>
+							<a onclick="pasarTabCargaDocs()">Continuar <i class="fa fa-arrow-right"></i></a>
 						</div>
 					</div>
 					<div class="tab-pane" id="3">
@@ -813,7 +819,7 @@
 							</div>
 						</div>
 						<div class="col-md-12 text-center">
-							<a href="#3">Continuar <i class="fa fa-arrow-right"></i></a>
+							<a href="entregatc.html">Continuar <i class="fa fa-arrow-right"></i></a>
 						</div>
 					</div>
 				</div>
