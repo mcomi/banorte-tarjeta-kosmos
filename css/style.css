@@ -1734,13 +1734,13 @@ body {
   text-align: center;
   height: 40%;
   /* Center and scale the image nicely */
-  background-image: url("../img/bg.png");
+  background-image: url("../img/header_bg.png");
   background-repeat: no-repeat;
   background-size: cover; }
 
 #solicitud-header {
   text-align: center;
-  height: 40%;
+  height: 55%;
   /* Center and scale the image nicely */
   background-image: url("../img/header_solicitud_bg.png");
   background-repeat: no-repeat;
@@ -2061,7 +2061,7 @@ body {
   .panel-status.entrega-tc {
     margin-top: 15px; }
   #solicitud-header {
-    height: 20%;
+    height: 22%;
     background-size: 100%; } }
 
 @media (min-width: 1281px) {
