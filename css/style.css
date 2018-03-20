@@ -1851,6 +1851,29 @@ body {
   color: #FFA400;
   border: 1px solid #FFA400; }
 
+.red-link a {
+  color: #EB0029 !important;
+  text-decoration: none;
+  margin: 10px;
+  display: block; }
+
+.busca-sucursal {
+  color: #EB0029 !important;
+  text-decoration: none;
+  margin: 10px;
+  display: block;
+  font-family: 'Gotham medium';
+  font-size: 20px; }
+
+.busca-sucursal:hover {
+  text-decoration: none; }
+
+.busca-sucursal .fa {
+  font-size: 32px; }
+
+.margin-40 {
+  margin: 40px; }
+
 .icons-row p.question-title {
   font-family: 'Gotham';
   font-size: 20px;
