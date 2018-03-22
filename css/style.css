@@ -1541,7 +1541,11 @@ select.form-control:after {
 .carousel-indicators {
   bottom: -50px; }
 
+.carousel-control.left, .carousel-control.rig {
+  background: transparent; }
+
 .carousel-control {
+  background: transparent;
   position: relative;
   display: inline-block;
   color: #fff;
@@ -2132,6 +2136,8 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column; }
+  .footer-bottom {
+    height: auto; }
   .navbar {
     min-height: 70px; }
   .consulta-folio-action {
