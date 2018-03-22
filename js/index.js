@@ -112,6 +112,18 @@ $('#btn-solicita-credito-fixed').click(function(){
   $('html, body').animate({ scrollTop: $('#cotizador').offset().top }, 'slow');
 })
 
+const menuLinks = $('#desktop-menu a');
+
+menuLinks.each(function(index) {
+  let menuItem = $(this);
+  menuItem.click(function(e){
+    e.preventDefault()
+    let section = this.getAttribute("href");
+    $('html, body').animate({ scrollTop: $(section).offset().top }, 'slow');
+  })
+
+});
+
 //Navigation Menu Slider
 $('#nav-expander').on('click', function(e) {
   e.preventDefault();
@@ -280,3 +292,16 @@ $('#quote-carousel').carousel({
       phoneRegionCode: 'MX'
     });
   }
+
+
+$('.step-icon').hover(function(){
+  $(this).animate2('swing');
+})
+
+
+$('#enlace-continua-solicitud').click(function(e){
+  if(!$('#aviso-privacidad-checkbox').is(':checked')){
+    e.preventDefault()
+    $('#aviso-privacidad-alert').removeClass('hidden')
+  }
+})
