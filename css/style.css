@@ -17,7 +17,7 @@
 
 .header-section h4, .precalificador-section h4 {
   font-family: 'Gotham';
-  font-size: 36px;
+  font-size: 43px;
   color: #ffffff;
   text-shadow: 1px 2px 0 #333;
   text-transform: uppercase; }
@@ -1234,12 +1234,14 @@ ul.terminos-condiciones {
   background: url("../img/hand-with-smartphone-red.svg") left center no-repeat/contain; }
 
 .form-group input, select.form-control {
+  font-family: 'Gotham medium';
   padding: 10px 30px;
   background: #F1F1F1;
   border-radius: 12px;
   outline: none;
   -webkit-appearance: none;
   font-size: 11px;
+  font-weight: bold;
   color: #B7B7B7;
   letter-spacing: 0;
   line-height: 16px;
@@ -1318,13 +1320,39 @@ select.form-control:after {
   font-size: 11px; }
 
 .input-success {
+  font-family: 'Gotham medium';
   position: absolute;
-  color: #C98305;
+  color: #FFA400;
   padding: 4px 0 20px 10px;
   font-size: 11px; }
 
 .modal .modal-docs {
   font-family: 'Gotham medium'; }
+
+label.label-select {
+  width: 100%; }
+
+label.label-select:after {
+  content: "\f078";
+  font-family: "FontAwesome";
+  font-size: 13px;
+  color: #FFA400;
+  right: 24px;
+  top: 9px;
+  padding: 0 0 2px;
+  position: absolute;
+  pointer-events: none; }
+
+label.label-select:before {
+  content: '';
+  right: 25px;
+  top: 10px;
+  width: 23px;
+  height: 18px;
+  background: #f1f1f1;
+  position: absolute;
+  pointer-events: none;
+  display: block; }
 
 .modal .modal-docs h2 {
   color: #EB0029;
@@ -1703,14 +1731,14 @@ body {
   padding-top: 15%; }
 
 #solicitud-header .header-section {
-  padding-top: 5%; }
+  padding-top: 14%; }
 
 #cotizador {
   margin-top: -30px; }
 
 .header-section span {
   font-family: 'Gotham';
-  font-size: 18px;
+  font-size: 24px;
   color: #ffffff;
   text-shadow: 1px 2px 0 #333;
   text-transform: uppercase; }
@@ -2087,7 +2115,32 @@ body {
 .margin-bottom-30 {
   margin-bottom: 30px; }
 
+.form-group {
+  margin-bottom: 25px; }
+
+.form-group p {
+  padding-top: 10px; }
+
+.select-group label {
+  font-size: .9em;
+  float: left; }
+
 /* importamos responsive al final */
+@media (min-width: 1281px) {
+  .header-section {
+    padding-top: 6%; }
+  .home.small-content #footer {
+    position: absolute;
+    bottom: 0; }
+  #solicitud-header .header-section {
+    padding-top: 15%; } }
+
+@media screen and (min-width: 900px) and (max-width: 1280px) {
+  #solicitud-header {
+    height: 51%; }
+  #solicitud-header .header-section {
+    padding-top: 9% !important; } }
+
 /* tablet, landscape iPad, lo-res laptops ands desktops */
 @media (max-height: 664px) {
   #landing-section {
@@ -2102,13 +2155,6 @@ body {
   #solicitud-header {
     height: 22%;
     background-size: 100%; } }
-
-@media (min-width: 1281px) {
-  .header-section {
-    padding-top: 6%; }
-  .home.small-content #footer {
-    position: absolute;
-    bottom: 0; } }
 
 @media (min-width: 1115px) {
   span.nav-expander {

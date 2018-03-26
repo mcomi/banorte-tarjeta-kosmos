@@ -1,6 +1,5 @@
 var btnsConfirmarCita = $('.btn-cita')
 var panelsCita = $('.panel-fecha-cita')
-var panelsOtros = document.getElementsByClassName('panel-fecha-cita')
 btnsConfirmarCita.each(function(){
   $(this).click(function(){
     var panelSeleccionado = $(this).closest('.panel-fecha-cita');
@@ -14,16 +13,16 @@ btnsConfirmarCita.each(function(){
         clone.children('button').click(function(){
           $('#cita-seleccionada').html('');
           panelsCita.each(function(){
-            $(this).removeClass('hidden');
+            $(this).show('slow');
           })
         })
 
 
         clone.children('.input-select-cita').html(cita)
-        clone.appendTo('#cita-seleccionada')
-        panel.addClass('hidden')
+        clone.appendTo('#cita-seleccionada').animate2('bounceInLeft');
+        panel.hide('slow')
       }else{
-        panel.addClass('hidden')
+        panel.hide('slow')
       }
     })
   })
@@ -35,20 +34,20 @@ btnsOpcionActivar.each(function(){
   $(this).click(function(){
     var panelSeleccionado = $(this).siblings('.panel-opcion-activacion');
     var clone = panelSeleccionado.parent().clone();
-    clone.appendTo('#opcion-activacion-seleccionada')
+    clone.appendTo('#opcion-activacion-seleccionada').animate2('bounceInLeft');
     clone.children('button').html('Cambiar').click(function(){
       $('#opcion-activacion-seleccionada').html('')
       panelsActivacion.each(function(){
         var panel = $(this)
-        panel.removeClass('hidden')
-        panel.siblings('.btn-activar').removeClass('hidden')
+        panel.show('slow')
+        panel.siblings('.btn-activar').show('slow')
 
       })
     })
     panelsActivacion.each(function(){
       var panel = $(this)
-      panel.addClass('hidden')
-      panel.siblings('.btn-activar').addClass('hidden')
+      panel.hide('slow')
+      panel.siblings('.btn-activar').hide('slow')
 
     })
   })

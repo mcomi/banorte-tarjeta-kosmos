@@ -177,13 +177,39 @@
 										</div>
 										<div class="row">
 											<div class="col-md-4 col-xs-12">
-												<div class="form-group col-xs-12">
-													<label for="fecha-nac">¿Cuándo naciste?</label>
-													<input type="text" class="form-control validate" id="fecha-nac" placeholder="Día/Mes/Año">
+												<div class="select-group col-xs-12">
+
+													<label for="">¿Cuándo naciste?</label>
+												</div>
+												<div class="form-group col-md-4 col-xs-4">
+													<label class="label-select" for="dia">
+													<select class="form-control validate" id="dia" placeholder="">
+													<option value="m" selected>1</option>
+													<option value="f">2</option>
+												</select></label>
+													<span class="input-success"></span>
+													<span class="input-error"></span>
+												</div>
+												<div class="form-group col-md-4 col-xs-4">
+													<label class="label-select" for="mes">
+													<select class="form-control validate" id="mes" placeholder="">
+													<option value="m" selected>enero</option>
+													<option value="f">febrero</option>
+												</select></label>
+													<span class="input-success"></span>
+													<span class="input-error"></span>
+												</div>
+												<div class="form-group col-md-4 col-xs-4">
+													<label class="label-select" for="año">
+													<select class="form-control validate" id="año" placeholder="">
+													<option value="m" selected>1980</option>
+													<option value="f">1981</option>
+												</select></label>
 													<span class="input-success"></span>
 													<span class="input-error"></span>
 												</div>
 											</div>
+
 											<div class="col-md-4 col-xs-12">
 												<div class="form-group col-xs-12">
 													<label for="nacionalidad">¿Tu nacionalidad es?</label>
@@ -193,12 +219,15 @@
 												</div>
 											</div>
 											<div class="col-md-4 col-xs-12">
+												<div class="select-group col-xs-12">
+													<label for="">Elige tu género</label>
+												</div>
 												<div class="form-group col-xs-12">
-													<label for="sexo">Elige tu género</label>
+													<label class="label-select" for="sexo">
 													<select class="form-control validate" id="sexo" placeholder="">
 													<option value="m" selected>Masculino</option>
 													<option value="f">Femenino</option>
-												</select>
+												</select></label>
 													<span class="input-success"></span>
 													<span class="input-error"></span>
 												</div>
@@ -222,6 +251,31 @@
 													<span class="input-success"></span>
 													<span class="input-error"></span>
 												</div>
+											</div><div class="col-md-4 col-xs-12">
+												<div class="select-group col-xs-12">
+													<label for="">Antigüedad en empleo</label>
+												</div>
+												<div class="form-group col-md-5 col-xs-5">
+													<label class="label-select" for="dia">
+													<select class="form-control validate" id="dia" placeholder="">
+													<option value="m" selected>mes</option>
+													<option value="f">2</option>
+												</select></label>
+													<span class="input-success"></span>
+													<span class="input-error"></span>
+												</div>
+												<div class="form-group col-md-2 col-xs-2">
+													<p>de:</p>
+												</div>
+												<div class="form-group col-md-5 col-xs-5">
+													<label class="label-select" for="dia">
+													<select class="form-control validate" id="dia" placeholder="">
+													<option value="m" selected>año</option>
+													<option value="f">2</option>
+												</select></label>
+													<span class="input-success"></span>
+													<span class="input-error"></span>
+												</div>
 											</div>
 
 										</div>
@@ -234,7 +288,7 @@
 
 
 						<div class="panel panel-default">
-							<div class="panel-heading" role="tab" id="headingOne">
+							<div class="panel-heading" role="tab" id="headingTwo">
 								<h4 class="panel-title">
 								<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#domicilio" aria-expanded="true" aria-controls="domicilio">
 									<span>Domicilio</span>
@@ -325,7 +379,7 @@
 
 
 						<div class="panel panel-default">
-							<div class="panel-heading" role="tab" id="headingOne">
+							<div class="panel-heading" role="tab" id="headingTree">
 								<h4 class="panel-title">
 								<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#datos-crediticios" aria-expanded="true" aria-controls="datos-crediticios">
 									<span>Datos crediticios</span>
