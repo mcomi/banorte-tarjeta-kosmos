@@ -1728,10 +1728,10 @@ body {
   padding-bottom: 20rem; }
 
 .header-section {
-  padding-top: 15%; }
+  padding-top: 8%; }
 
 #solicitud-header .header-section {
-  padding-top: 14%; }
+  padding-top: 6%; }
 
 #cotizador {
   margin-top: -30px; }
@@ -1776,7 +1776,7 @@ body {
 
 #solicitud-header {
   text-align: center;
-  height: 55%;
+  height: 40%;
   /* Center and scale the image nicely */
   background-image: url("../img/header_solicitud_bg.png");
   background-repeat: no-repeat;
@@ -2133,13 +2133,7 @@ body {
     position: absolute;
     bottom: 0; }
   #solicitud-header .header-section {
-    padding-top: 15%; } }
-
-@media screen and (min-width: 900px) and (max-width: 1280px) {
-  #solicitud-header {
-    height: 51%; }
-  #solicitud-header .header-section {
-    padding-top: 9% !important; } }
+    padding-top: 6%; } }
 
 /* tablet, landscape iPad, lo-res laptops ands desktops */
 @media (max-height: 664px) {
@@ -2153,7 +2147,6 @@ body {
   .panel-status.entrega-tc {
     margin-top: 15px; }
   #solicitud-header {
-    height: 22%;
     background-size: 100%; } }
 
 @media (min-width: 1115px) {
@@ -2182,6 +2175,12 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column; }
+  #solicitud-header {
+    height: 24%; }
+  .header-section h4, .precalificador-section h4 {
+    font-size: 20px; }
+  .header-section span {
+    font-size: 18px; }
   .footer-bottom {
     height: auto; }
   .navbar {
