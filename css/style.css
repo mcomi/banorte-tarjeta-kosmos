@@ -1125,6 +1125,8 @@ span.line-after:before {
     visibility: hidden; }
     .squaredThree input[type=checkbox]:checked + label:after {
       opacity: 1; }
+  .squaredThree a {
+    display: inline !important; }
 
 /* end .squaredThree */
 .code-input, .code-input-olvidado {
