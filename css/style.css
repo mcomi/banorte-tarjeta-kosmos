@@ -1690,7 +1690,7 @@ body {
 .navbar {
   background-color: #EB0029;
   background-repeat: repeat;
-  background-image: url("../img/navigation.png");
+  background-image: url("../img/Banorte_Texture.png");
   border-radius: 0;
   margin-bottom: 0;
   border: 0; }
@@ -1716,7 +1716,7 @@ body {
 #landing-section {
   height: 37%; }
 
-.navbar-collapse {
+.collapse.in {
   background: #EB0029; }
 
 .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
