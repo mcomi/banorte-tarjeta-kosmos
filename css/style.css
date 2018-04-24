@@ -972,6 +972,11 @@ p.terminos a {
 .panel-opcion-activacion {
   text-align: center; }
 
+.panel-opcion-activacion .fa {
+  position: absolute;
+  right: 30px;
+  top: 0; }
+
 .panel-opcion-activacion p {
   font-family: 'Gotham medium';
   font-size: 14px;

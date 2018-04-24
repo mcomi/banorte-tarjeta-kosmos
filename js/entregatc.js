@@ -1,3 +1,6 @@
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
 var btnsConfirmarCita = $('.btn-cita')
 var panelsCita = $('.panel-fecha-cita')
 btnsConfirmarCita.each(function(){
