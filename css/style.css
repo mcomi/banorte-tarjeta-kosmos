@@ -2164,7 +2164,8 @@ body {
     height: 65px; }
   .navbar-default .navbar-nav > li > a, .navbar-nav > li {
     color: #FFFFFF;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    padding: 2px 8px; }
   .navbar-nav > li {
     padding: 20px 10px 15px 18px; }
   .navbar-nav > li > a {
@@ -2241,7 +2242,7 @@ body {
   .navbar-nav {
     float: right; }
   .navbar-nav > li > a, .navbar-nav > li {
-    font-size: 12px;
+    font-size: small;
     letter-spacing: 0;
     line-height: 26px;
     font-family: 'Gotham'; }
