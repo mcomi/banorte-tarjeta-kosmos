@@ -45,7 +45,7 @@
 </head>
 
 <body>
-	<div class="navbar navbar-default">
+	<div class="navbar navbar-fixed-top navbar-default">
 		<div class="container">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
@@ -693,9 +693,39 @@
 			</div>
 		</div>
 
-		<!-- Modal inicia solicitud -->
-		<div class="modal" id="modalSolicitudDatosBasicos" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-			<div class="modal-dialog" role="document">
+		
+
+		<footer id="footer">
+			<!-- modal fovissste/infonavit-->
+
+			<!-- .footer-top -->
+			<div class="footer-bottom">
+				<div class="container">
+					<div class="row">
+						<div class="phone-cont col-xs-12 col-sm-4 col-md-4">
+
+							<div class="col-md-12 social">
+								<a href="https://www.facebook.com/banorte"><img src="img/facebook-letter-logo.svg" alt=""></a>
+								<a href="https://www.twitter.com/Banorte_mx"><img src="img/twitter-logo.svg" alt=""></a>
+								<a href="https://www.youtube.com/user/banortemovil/"><img src="img/youtube-logo.svg" alt=""></a>
+								<a href="https://www.instagram.com/banorte_mx/"><img src="img/instagram-logo.svg" alt=""></a>
+							</div>
+						</div>
+						<div class="copyright col-xs-12 col-sm-8 col-md-8">
+
+							<div class="text-footer-bottom"><a href="https://www.banorte.com/wps/portal/gfb?uri=nm:oid:banorte-te-informa.terminos-legales">Términos Legales</a> | <a href="https://www.banorte.com/wps/portal/gfb?uri=nm:oid:banorte-te-informa.aviso-de-privacidad">Aviso de Privacidad</a> | <a href="https://www.banorte.com/wps/portal/banorte/Home/inicio/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOLdjQwtPIydDbz9A0KNDRyd_UOdA0xdjELMzIEKIoEKDHAARwNC-sP1o8BKnN0dPUzMfQwM_E3cjQwcLfy8TIJNLY0MPM2gCvBYUZAbYZDpqKgIALNrqj4!/dl5/d5/L2dBISEvZ0FBIS9nQSEh/?uri=nm:oid:consulta-costos-y-comisiones">Consulta los costos y las comisiones de nuestros productos</a>
+								2017 Grupo Financiero Banorte. Derechos reservados.</div>
+							</div>
+					</div>
+				</div>
+			</div>
+	<!-- .footer-bottom -->
+	</footer>
+	</div>
+
+	<!-- Modal inicia solicitud -->
+	<div class="modal" id="modalSolicitudDatosBasicos" tabindex="-2" role="dialog" aria-labelledby="modalSolicitudDatosBasicos">
+			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span><img src="img/cancel-music.svg" alt=""> Cerrar</span></button>
@@ -714,7 +744,7 @@
 														<p>Necesitamos conocerte, con esta información básica generamos un folio y podrás consultar tú estatus con tu número celular. Solicita el codigo SMS y continua con el proceso</p>
 
 														<div class="col-md-4 col-xs-12">
-															<div class="form-group col-xs-12">
+															<div class="form-group">
 																<label for="nombre">¿Tu nombre es?</label>
 																<input type="tel" class="form-control validate" id="nombre" placeholder="Nombre">
 																<span class="input-success"></span>
@@ -722,7 +752,7 @@
 															</div>
 														</div>
 														<div class="col-md-4 col-xs-12">
-															<div class="form-group col-xs-12">
+															<div class="form-group">
 																<label for="correo">¿Tu correo electrónico es?</label>
 																<input type="tel" class="form-control validate" id="correo" placeholder="juan@gmail.com">
 																<span class="input-success"></span>
@@ -730,14 +760,14 @@
 															</div>
 														</div>
 														<div class="col-md-4 col-xs-12">
-															<div class="form-group col-xs-12">
+															<div class="form-group">
 																<label for="celular">¿Tu celular es?</label>
 																<input type="tel" class="form-control validate" id="celular" placeholder="55 0000 0000">
 																<span class="input-success"></span>
 																<span class="input-error"></span>
 															</div>
 														</div>
-														<div class="col-md-12 text-center">
+														<div class="col-xs-12 text-center">
 															<button id="btn-solicita-sms" class="btn btn-red btn-small">Solicitar código SMS</button>
 															<div id="loader-phone-message" class="row hidden">
 																<div class="sk-folding-cube">
@@ -771,7 +801,7 @@
 																		<div class="squaredThree">
 																      <input type="checkbox" value="avisoprivacidad" id="aviso-privacidad-checkbox" name="check" />
 																      <label for="aviso-privacidad-checkbox">  </label>
-																			&nbsp;&nbsp;Acepto aviso de Privacidad
+																			&nbsp;&nbsp;<a href="">Acepto aviso de Privacidad</a>
 																    </div>
 																		<div class="squaredThree">
 																      <input type="checkbox" value="avisopublicidad" id="aviso-publicidad-checkbox" name="check" />
@@ -787,7 +817,7 @@
 																<i class="fa fa-info-circle"></i> Debes aceptar el aviso de privacidad para continuar
 															</div>
 														</div>
-														<div class="col-md-12 text-right">
+														<div class="col-xs-12 text-right">
 															<a href="solicitud.html" id="enlace-continua-solicitud">Continuar <i class="fa fa-arrow-right"></i></a>
 														</div>
 												</div>
@@ -803,7 +833,7 @@
 		</div>
 
 		<!--modal consulta folio -->
-		<div class="modal modal-sm" id="modalConsultaFolio" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal modal-sm" id="modalConsultaFolio" tabindex="-3" role="dialog" aria-labelledby="myModalLabel">
 			<div class="modal-dialog modal-folio" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -877,36 +907,6 @@
 				</div>
 			</div>
 		</div>
-
-		<footer id="footer">
-			<!-- modal fovissste/infonavit-->
-
-			<!-- .footer-top -->
-			<div class="footer-bottom">
-				<div class="container">
-					<div class="row">
-						<div class="phone-cont col-xs-12 col-sm-4 col-md-4">
-
-							<div class="col-md-12 social">
-								<a href="https://www.facebook.com/banorte"><img src="img/facebook-letter-logo.svg" alt=""></a>
-								<a href="https://www.twitter.com/Banorte_mx"><img src="img/twitter-logo.svg" alt=""></a>
-								<a href="https://www.youtube.com/user/banortemovil/"><img src="img/youtube-logo.svg" alt=""></a>
-								<a href="https://www.instagram.com/banorte_mx/"><img src="img/instagram-logo.svg" alt=""></a>
-							</div>
-						</div>
-						<div class="copyright col-xs-12 col-sm-8 col-md-8">
-
-							<div class="text-footer-bottom"><a href="https://www.banorte.com/wps/portal/gfb?uri=nm:oid:banorte-te-informa.terminos-legales">Términos Legales</a> | <a href="https://www.banorte.com/wps/portal/gfb?uri=nm:oid:banorte-te-informa.aviso-de-privacidad">Aviso de Privacidad</a> | <a href="https://www.banorte.com/wps/portal/banorte/Home/inicio/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOLdjQwtPIydDbz9A0KNDRyd_UOdA0xdjELMzIEKIoEKDHAARwNC-sP1o8BKnN0dPUzMfQwM_E3cjQwcLfy8TIJNLY0MPM2gCvBYUZAbYZDpqKgIALNrqj4!/dl5/d5/L2dBISEvZ0FBIS9nQSEh/?uri=nm:oid:consulta-costos-y-comisiones">Consulta los costos y las comisiones de nuestros productos</a>
-								2017 Grupo Financiero Banorte. Derechos reservados.</div>
-							</div>
-					</div>
-				</div>
-			</div>
-	</div>
-	<!-- .footer-bottom -->
-	</footer>
-	</div>
-
 
 
 	<script src="libs/jquery.js"></script>

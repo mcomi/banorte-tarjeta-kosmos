@@ -1735,7 +1735,7 @@ body {
   padding-bottom: 20rem; }
 
 .header-section {
-  padding-top: 8%; }
+  padding-top: 10%; }
 
 #solicitud-header .header-section {
   padding-top: 6%; }
@@ -2145,7 +2145,7 @@ body {
 /* tablet, landscape iPad, lo-res laptops ands desktops */
 @media (max-height: 664px) {
   #landing-section {
-    height: 34%; }
+    height: 40%; }
   .header-section h4, .precalificador-section h4 {
     font-size: 30px; }
   .panel-status.entrega-tc .panel-tarjeta {
