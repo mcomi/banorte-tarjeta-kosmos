@@ -2185,6 +2185,8 @@ body {
             flex-direction: column; }
   #solicitud-header {
     height: 24%; }
+  .header-section {
+    padding-top: 30%; }
   .header-section h4, .precalificador-section h4 {
     font-size: 20px; }
   .header-section span {
