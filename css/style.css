@@ -2227,6 +2227,8 @@ body {
     margin-bottom: 20px;
     margin-left: 6%;
     margin-right: 6%; }
+  .padding-header-mobile {
+    padding-top: 70px; }
   .panel-status .status-title {
     font-size: 24px; }
   .panel-status .panel-tarjeta {
