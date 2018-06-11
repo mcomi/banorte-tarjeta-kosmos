@@ -2178,11 +2178,22 @@ body {
     height: 80px; } }
 
 @media (max-width: 435px) {
+  .padding-header-mobile {
+    padding-top: 70px; }
+  .squaredThree {
+    margin: 10px 15px; }
   .solicitud .nav-tabs {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column; }
+  .carousel {
+    height: 440px; }
+  .quote {
+    font-size: 22px; }
+  .modal .right .btn {
+    margin: 0;
+    width: 140px; }
   #solicitud-header {
     height: 24%; }
   .header-section {
@@ -2211,6 +2222,17 @@ body {
     padding-bottom: 20px; }
   #modalSolicitudDatosBasicos .modal-content {
     height: auto; }
+  .panel-status {
+    margin-top: -40px;
+    margin-bottom: 20px;
+    margin-left: 6%;
+    margin-right: 6%; }
+  .panel-status .status-title {
+    font-size: 24px; }
+  .panel-status .panel-tarjeta {
+    margin: 18px 0; }
+  .panel-tarjeta-text p.linea-credito {
+    padding: 5px; }
   ul.terminos-condiciones {
     padding-top: 50px; }
   .footer-bottom .phone-cont {
