@@ -1721,9 +1721,6 @@ body {
 #landing-section {
   height: 37%; }
 
-.collapse.in {
-  background: #EB0029; }
-
 .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
   background-color: transparent; }
 
@@ -2154,7 +2151,9 @@ body {
   .panel-status.entrega-tc {
     margin-top: 15px; }
   #solicitud-header {
-    background-size: 100%; } }
+    background-size: 100%; }
+  .solicitud .nav-tabs {
+    display: inline-block; } }
 
 @media (min-width: 1115px) {
   span.nav-expander {
