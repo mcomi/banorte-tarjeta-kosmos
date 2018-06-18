@@ -120,6 +120,7 @@ menuLinks.each(function(index) {
     e.preventDefault()
     let section = this.getAttribute("href");
     $('html, body').animate({ scrollTop: $(section).offset().top }, 'slow');
+    $('.navbar-collapse').removeClass('in');
   })
 
 });
