@@ -2151,7 +2151,34 @@ body {
   .panel-status.entrega-tc {
     margin-top: 15px; }
   #solicitud-header {
-    background-size: 100%; }
+    background-size: 100%; } }
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .header-section {
+    padding-top: 25%; }
+  .panel-tarjeta {
+    margin: 0;
+    padding: 5px 12px; }
+  .step-panel {
+    padding: 20px;
+    height: 195px;
+    margin: 5px 0; }
+  .step-panel p {
+    padding-top: 20px;
+    color: #fff;
+    height: 52px; }
+  #footer {
+    height: 122px; }
+  .footer-bottom .phone-cont img {
+    height: 27px; } }
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  #solicitud-header {
+    height: 44%; }
+  #solicitud-header .header-section {
+    padding-top: 46px; }
+  .solicitud {
+    margin-top: -28px; }
   .solicitud .nav-tabs {
     display: inline-block; }
   .panel-tarjeta {
@@ -2162,7 +2189,20 @@ body {
     height: 165px;
     margin: 10px; }
   .step-panel p {
-    height: 35px; } }
+    height: 35px; }
+  .quote {
+    font-size: 22px; }
+  #modalCardDescription .panel-tarjeta {
+    margin: 0 auto;
+    padding: 5px 10px;
+    width: 45%; }
+  .solicitud .nav-tabs li > a,
+  .solicitud .nav-tabs li.active > a {
+    font-size: 13px; }
+  .solicitud .nav-tabs > li.active > a:hover {
+    font-size: 13px; }
+  footer {
+    height: 122px; } }
 
 @media (min-width: 1115px) {
   span.nav-expander {
