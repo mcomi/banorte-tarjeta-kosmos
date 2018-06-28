@@ -1124,8 +1124,6 @@ span.line-after:before {
       opacity: 0;
       -webkit-transform: rotate(-45deg);
               transform: rotate(-45deg); }
-    .squaredThree label:hover::after {
-      opacity: 0.3; }
   .squaredThree input[type=checkbox] {
     visibility: hidden; }
     .squaredThree input[type=checkbox]:checked + label:after {
@@ -2201,6 +2199,14 @@ body {
     font-size: 13px; }
   .solicitud .nav-tabs > li.active > a:hover {
     font-size: 13px; }
+  .panel-status .status-title {
+    font-family: 'Gotham medium';
+    font-size: 24px;
+    color: #4E4044;
+    letter-spacing: 0;
+    line-height: 29px; }
+  .panel-status .panel-tarjeta {
+    margin: 21px 6%; }
   footer {
     height: 122px; } }
 
